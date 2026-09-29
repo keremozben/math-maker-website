@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MathMaker — Süreli Matematik Bilgi Yarışması Oyunu</title>
+    <meta
+      name="description"
+      content="MathMaker, hızlı tempolu bir matematik bilgi yarışması oyunu. Büyük matematikçilerin adını taşıyan 7 kategori, 2.300 level ve 69.000 soru — zamana karşı cevapla, Sigma topla, bir sonraki meydan okumanın kilidini aç."
+    />
+    <link rel="canonical" href="https://math-maker.com/tr/" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#151f2b" />
+
+    <link rel="alternate" hreflang="en" href="https://math-maker.com/" />
+    <link rel="alternate" hreflang="tr" href="https://math-maker.com/tr/" />
+    <link rel="alternate" hreflang="x-default" href="https://math-maker.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MathMaker" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:url" content="https://math-maker.com/tr/" />
+    <meta property="og:title" content="MathMaker — Süreli Matematik Oyunu" />
+    <meta
+      property="og:description"
+      content="7 kategori, 2.300 level, 69.000 soru. Zamana karşı cevapla, Sigma topla, bir sonraki büyük matematikçinin kilidini aç."
+    />
+    <meta property="og:image" content="https://math-maker.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MathMaker — Süreli Matematik Oyunu" />
+    <meta name="twitter:description" content="7 kategori, 2.300 level, 69.000 soru. Zihnin ne kadar hızlı?" />
+    <meta name="twitter:image" content="https://math-maker.com/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "MathMaker",
+        "description": "7 kategori, 2.300 level ve 69.000 sorudan oluşan, hızlı tempolu, süreli çoktan seçmeli matematik bilgi yarışması oyunu.",
+        "url": "https://math-maker.com/tr/",
+        "image": "https://math-maker.com/og-image.png",
+        "genre": ["Educational", "Trivia", "Brain Game"],
+        "gamePlatform": ["iOS", "Android"],
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "iOS, Android",
+        "inLanguage": ["en", "tr", "de", "es", "fr", "it", "pt-BR", "pl", "id", "vi", "ru", "hi", "zh-Hans", "zh-Hant", "ja", "ko"]
+      }
+    </script>
+
+    <link rel="preload" href="/fonts/exo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/lang.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a class="logo" href="/tr/" data-nav="home"><img src="/favicon.png" alt="" width="34" height="34" />MathMaker</a>
+        <ul class="nav-links">
+          <li><a href="/tr/" class="active" data-nav="home">Ana Sayfa</a></li>
+          <li><a href="/tr/support.html" data-nav="support">Destek</a></li>
+          <li><a href="/tr/privacy-policy.html" data-nav="privacy">Gizlilik</a></li>
+          <li><a href="/tr/terms-of-service.html" data-nav="terms">Koşullar</a></li>
+        </ul>
+        <select class="lang-select" aria-label="Dil" onchange="if(this.value)location.href=this.value">
+          <option value="/">English</option>
+          <option value="/tr/" selected>Türkçe</option>
+        </select>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="hero-eyebrow">MIND CHALLENGE</span>
+          <h1>MathMaker</h1>
+          <p class="hero-tagline">
+            Zihnin sınırlarına hoş geldin. Zamana karşı cevapla, serini koru ve
+            Pisagor'un Çırağı'ndan Gauss Kıyameti'ne kadar yüksel.
+          </p>
+
+          <div class="hero-stats">
+            <div>
+              <div class="stat-number">7</div>
+              <div class="stat-label">Kategori</div>
+            </div>
+            <div>
+              <div class="stat-number">2.300</div>
+              <div class="stat-label">Level</div>
+            </div>
+            <div>
+              <div class="stat-number">69.000</div>
+              <div class="stat-label">Soru</div>
+            </div>
+            <div>
+              <div class="stat-number">16</div>
+              <div class="stat-label">Dil</div>
+            </div>
+          </div>
+
+          <div class="store-badges">
+            <a
+              class="store-badge store-badge--soon"
+              href="mailto:contact@math-maker.com?subject=MathMaker%20iOS%27ta%20%C3%A7%C4%B1k%C4%B1nca%20haber%20ver"
+              aria-label="App Store — çok yakında, çıkınca e-postayla haber ver"
+            >
+              <img src="/app-store.png" alt="Çok yakında App Store'da" width="160" height="53" />
+              <span class="badge-ribbon">Çok yakında</span>
+            </a>
+            <a
+              class="store-badge store-badge--soon"
+              href="mailto:contact@math-maker.com?subject=MathMaker%20Android%27de%20%C3%A7%C4%B1k%C4%B1nca%20haber%20ver"
+              aria-label="Google Play — çok yakında, çıkınca e-postayla haber ver"
+            >
+              <img src="/google-play.png" alt="Çok yakında Google Play'de" width="160" height="53" />
+              <span class="badge-ribbon">Çok yakında</span>
+            </a>
+          </div>
+          <p class="hero-note">iPhone, iPad ve Android'de ücretsiz. Çıktığında haber almak için bir rozete dokun.</p>
+        </div>
+
+        <div class="hero-mockup" aria-hidden="true">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="mock-top">
+                <span>Level 12</span>
+                <span class="mock-hearts">♥♥♥♥♡</span>
+              </div>
+              <div class="mock-category">Harezmi'nin Katları</div>
+              <div class="mock-timer"><span>14</span></div>
+              <div class="mock-question">7 × 8 = ?</div>
+              <div class="mock-answers">
+                <div class="mock-answer">54</div>
+                <div class="mock-answer is-correct">56</div>
+                <div class="mock-answer">48</div>
+                <div class="mock-answer">64</div>
+              </div>
+              <div class="mock-powerups">
+                <div class="mock-powerup">İPUCU</div>
+                <div class="mock-powerup">50-50</div>
+                <div class="mock-powerup">DEĞİŞ</div>
+                <div class="mock-powerup">+5sn</div>
+              </div>
+              <div class="mock-score">
+                <span class="sigma">12.400 Σ</span>
+                <span class="epsilon">350 ε</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="features">
+        <h2>Neden Bırakamayacaksın?</h2>
+        <p class="section-lead">
+          Kısa turlar, net kurallar ve açtığın her matematikçiyle daha da tatlanan bir ödül eğrisi.
+        </p>
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">⏱</div>
+            <h3>Zamana Karşı</h3>
+            <p>Her soru için 20 saniye. Ne kadar hızlı cevaplarsan zaman bonusu o kadar büyür — 2 kata kadar Sigma.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔥</div>
+            <h3>Strike Serisi</h3>
+            <p>Üst üste 10 doğru yap; ondan sonraki her doğru cevap iki kat değerli.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">Σ</div>
+            <h3>Sigma ve Epsilon</h3>
+            <p>Sigma (Σ) hem skorun hem yeni kategorilerin anahtarı. Epsilon (ε) ile güçlendirici alır, kategorileri erken açarsın.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✦</div>
+            <h3>Güçlendiriciler</h3>
+            <p>Takıldın mı? İpucu al, 50-50 kullan, soruyu değiştir ya da 5 saniye ek süre kap.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏅</div>
+            <h3>Rozetler ve Kazanımlar</h3>
+            <p>Her kategoride Bronz, Gümüş ve Altın aşama — İlkokul'dan başlayıp Profesör'e kadar mezun ol.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>Küresel Sıralama</h3>
+            <p>Toplam Sigma'n sıralama tablosuna yazılır. Dünyanın dört bir yanındaki oyunculara karşı yerini gör.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="band">
+        <section class="section" id="categories">
+          <h2>Yedi Büyük Zihin</h2>
+          <p class="section-lead">
+            Her kategori bir öncekinden daha zor — ve daha ödüllü. Bir sonrakini açmak için toplam
+            Sigma biriktir ya da Epsilon ile erkenden aç.
+          </p>
+          <div class="categories">
+            <div class="category-card">
+              <div class="category-num">C1</div>
+              <h3>Pisagor'un Çırağı</h3>
+              <p>Motoru ısıtmak için toplama ve çıkarma.</p>
+              <span class="category-unlock is-free">Baştan açık</span>
+            </div>
+            <div class="category-card">
+              <div class="category-num">C2</div>
+              <h3>Harezmi'nin Katları</h3>
+              <p>Çarpma ve tam bölme.</p>
+              <span class="category-unlock">500 bin Σ</span>
+            </div>
+            <div class="category-card">
+              <div class="category-num">C3</div>
+              <h3>Öklid'in Labirenti</h3>
+              <p>İşlem önceliği — tuzaklara dikkat.</p>
+              <span class="category-unlock">1 milyon Σ</span>
+            </div>
+            <div class="category-card">
+              <div class="category-num">C4</div>
+              <h3>Newton'un Hücresi</h3>
+              <p>İç içe parantezler, katman katman.</p>
+              <span class="category-unlock">2 milyon Σ</span>
+            </div>
+            <div class="category-card">
+              <div class="category-num">C5</div>
+              <h3>Fibonacci'nin Şifresi</h3>
+              <p>Örüntüyü bul, diziyi tamamla.</p>
+              <span class="category-unlock">4 milyon Σ</span>
+            </div>
+            <div class="category-card">
+              <div class="category-num">C6</div>
+              <h3>Euler'in Gücü</h3>
+              <p>Üsler, kökler ve faktöriyeller.</p>
+              <span class="category-unlock">8 milyon Σ</span>
+            </div>
+            <div class="category-card">
+              <div class="category-num">C7</div>
+              <h3>Gauss Kıyameti</h3>
+              <p>İçine örüntüler gizlenmiş hibrit kaos.</p>
+              <span class="category-unlock">16 milyon Σ</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="section" id="how-to-play">
+        <h2>Nasıl Oynanır?</h2>
+        <p class="section-lead">Bir level 20 sorudan oluşur. Dört şık, tek doğru cevap.</p>
+        <div class="how-to-play">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-title">Kategorini Seç</div>
+            <div class="step-description">Kategori çarkını çevir ve açık bir matematikçiye dokunarak sıradaki level'a başla.</div>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-title">Hızlı Cevapla</div>
+            <div class="step-description">Her soru için 20 saniyen var. Yanlış cevap ya da süre bitimi bir can götürür — canlar zamanla dolar.</div>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-title">Yüksel</div>
+            <div class="step-description">Sigma ve Epsilon topla, Bronz'dan Gümüş'e, oradan Altın'a çık ve bir sonraki zihnin kilidini aç.</div>
+          </div>
+        </div>
+        <p class="formula">
+          <strong>Doğru cevap başına Sigma</strong> = kategori tabanı × aşama (Bronz ×1 · Gümüş ×1,35 · Altın ×1,75)
+          × zaman bonusu (×2'ye kadar) × seri (×2) × 100
+        </p>
+      </section>
+
+      <div class="band">
+        <section class="section" id="play">
+          <h2>Hemen Dene</h2>
+          <p class="section-lead">Pisagor'un Çırağı'ndan beş soru — oyundaki gerçek süre ve puanlamayla.</p>
+          <div class="demo" id="demo">
+            <div class="demo-hud">
+              <span data-demo="progress"></span>
+              <span class="sigma" data-demo="sigma"></span>
+              <span class="epsilon" data-demo="epsilon"></span>
+            </div>
+            <div class="demo-timer"><div class="demo-timer-bar" data-demo="bar"></div></div>
+            <div class="demo-question" data-demo="question" aria-live="polite"></div>
+            <div class="demo-answers" data-demo="answers"></div>
+            <div class="demo-status" data-demo="status" aria-live="polite"></div>
+            <button type="button" class="demo-start" data-demo="start"></button>
+            <div class="demo-cta" data-demo="cta" hidden>
+              <a href="mailto:contact@math-maker.com?subject=MathMaker%20%C3%A7%C4%B1k%C4%B1nca%20haber%20ver">Çıkınca haber ver →</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <a href="/tr/support.html" data-nav="support">Destek</a>
+        <a href="/tr/privacy-policy.html" data-nav="privacy">Gizlilik Politikası</a>
+        <a href="/tr/terms-of-service.html" data-nav="terms">Kullanım Koşulları</a>
+      </div>
+      <p>© 2026 MathMaker. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+      window.DEMO_T = {
+        idleTitle: "Hazır mısın?",
+        idleText: "5 soru · her biri 20 saniye",
+        start: "Başla",
+        again: "Tekrar oyna",
+        progress: "Soru {n}/{total}",
+        hint: "Doğru cevabı seç.",
+        correct: "Doğru! +{sigma} Σ · +{epsilon} ε",
+        wrong: "Yanlış cevap!",
+        timeout: "Süre doldu!",
+        doneTitle: "Level tamamlandı!",
+        doneText: "{correct}/{total} doğru — {sigma} Σ ve {epsilon} ε kazandın.",
+      };
+    </script>
+    <script src="/demo.js" defer></script>
+  </body>
+</html>
