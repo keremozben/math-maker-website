@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MathMaker — Timed Math Quiz Game | Mind Challenge</title>
+    <meta
+      name="description"
+      content="MathMaker is a fast-paced math quiz game. 7 categories named after great mathematicians, 2,300 levels and 69,000 questions — answer against the clock, earn Sigma and unlock the next challenge."
+    />
+    <link rel="canonical" href="https://math-maker.com/" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#151f2b" />
+
+    <link rel="alternate" hreflang="en" href="https://math-maker.com/" />
+    <link rel="alternate" hreflang="tr" href="https://math-maker.com/tr/" />
+    <link rel="alternate" hreflang="x-default" href="https://math-maker.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MathMaker" />
+    <meta property="og:url" content="https://math-maker.com/" />
+    <meta property="og:title" content="MathMaker — Timed Math Quiz Game" />
+    <meta
+      property="og:description"
+      content="7 categories, 2,300 levels, 69,000 questions. Answer against the clock, earn Sigma and unlock the next great mathematician."
+    />
+    <meta property="og:image" content="https://math-maker.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MathMaker — Timed Math Quiz Game" />
+    <meta
+      name="twitter:description"
+      content="7 categories, 2,300 levels, 69,000 questions. How fast is your mind?"
+    />
+    <meta name="twitter:image" content="https://math-maker.com/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "MathMaker",
+        "description": "A fast-paced, timed multiple-choice math quiz game with 7 categories, 2,300 levels and 69,000 questions.",
+        "url": "https://math-maker.com/",
+        "image": "https://math-maker.com/og-image.png",
+        "genre": ["Educational", "Trivia", "Brain Game"],
+        "gamePlatform": ["iOS", "Android"],
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "iOS, Android",
+        "inLanguage": ["en", "tr", "de", "es", "fr", "it", "pt-BR", "pl", "id", "vi", "ru", "hi", "zh-Hans", "zh-Hant", "ja", "ko"]
+      }
+    </script>
+
+    <link rel="preload" href="/fonts/exo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/lang.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a class="logo" href="/" data-nav="home"><img src="/favicon.png" alt="" width="34" height="34" />MathMaker</a>
+        <ul class="nav-links">
+          <li><a href="/" class="active" data-nav="home">Home</a></li>
+          <li><a href="/support.html" data-nav="support">Support</a></li>
+          <li><a href="/privacy-policy.html" data-nav="privacy">Privacy</a></li>
+          <li><a href="/terms-of-service.html" data-nav="terms">Terms</a></li>
+        </ul>
+        <select class="lang-select" aria-label="Language" onchange="if(this.value)location.href=this.value">
+          <option value="/" selected>English</option>
+          <option value="/tr/">Türkçe</option>
+        </select>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="hero-eyebrow">MIND CHALLENGE</span>
+          <h1>MathMaker</h1>
+          <p class="hero-tagline">
+            Welcome to the edge of your mind. Answer against the clock, keep your
+            streak alive and work your way from Pythagoras' Apprentice to the
+            Gauss Apocalypse.
+          </p>
+
+          <div class="hero-stats">
+            <div>
+              <div class="stat-number">7</div>
+              <div class="stat-label">Categories</div>
+            </div>
+            <div>
+              <div class="stat-number">2,300</div>
+              <div class="stat-label">Levels</div>
+            </div>
+            <div>
+              <div class="stat-number">69,000</div>
+              <div class="stat-label">Questions</div>
+            </div>
+            <div>
+              <div class="stat-number">16</div>
+              <div class="stat-label">Languages</div>
+            </div>
+          </div>
+
+          <div class="store-badges">
+            <a
+              class="store-badge store-badge--soon"
+              href="mailto:contact@math-maker.com?subject=Notify%20me%20when%20MathMaker%20launches%20on%20iOS"
+              aria-label="App Store — coming soon, email me at launch"
+            >
+              <img src="/app-store.png" alt="Coming soon to the App Store" width="160" height="53" />
+              <span class="badge-ribbon">Coming soon</span>
+            </a>
+            <a
+              class="store-badge store-badge--soon"
+              href="mailto:contact@math-maker.com?subject=Notify%20me%20when%20MathMaker%20launches%20on%20Android"
+              aria-label="Google Play — coming soon, email me at launch"
+            >
+              <img src="/google-play.png" alt="Coming soon to Google Play" width="160" height="53" />
+              <span class="badge-ribbon">Coming soon</span>
+            </a>
+          </div>
+          <p class="hero-note">Free to play on iPhone, iPad and Android. Tap a badge to get notified at launch.</p>
+        </div>
+
+        <div class="hero-mockup" aria-hidden="true">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="mock-top">
+                <span>Level 12</span>
+                <span class="mock-hearts">♥♥♥♥♡</span>
+              </div>
+              <div class="mock-category">Al-Khwarizmi's Multiples</div>
+              <div class="mock-timer"><span>14</span></div>
+              <div class="mock-question">7 × 8 = ?</div>
+              <div class="mock-answers">
+                <div class="mock-answer">54</div>
+                <div class="mock-answer is-correct">56</div>
+                <div class="mock-answer">48</div>
+                <div class="mock-answer">64</div>
+              </div>
+              <div class="mock-powerups">
+                <div class="mock-powerup">HINT</div>
+                <div class="mock-powerup">50-50</div>
+                <div class="mock-powerup">SWAP</div>
+                <div class="mock-powerup">+5s</div>
+              </div>
+              <div class="mock-score">
+                <span class="sigma">12,400 Σ</span>
+                <span class="epsilon">350 ε</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="features">
+        <h2>Why It's Addictive</h2>
+        <p class="section-lead">
+          Quick rounds, clear rules and a reward curve that keeps getting better with every
+          mathematician you unlock.
+        </p>
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">⏱</div>
+            <h3>Beat the Clock</h3>
+            <p>20 seconds per question. The faster you answer, the bigger the time bonus — up to 2× Sigma.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔥</div>
+            <h3>Strike Streaks</h3>
+            <p>Get 10 answers right in a row and every correct answer after that is worth double.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">Σ</div>
+            <h3>Sigma &amp; Epsilon</h3>
+            <p>Sigma (Σ) is your score and your key to new categories. Epsilon (ε) buys power-ups and early unlocks.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✦</div>
+            <h3>Power-Ups</h3>
+            <p>Stuck? Use a Hint, go 50-50, swap the question or grab 5 extra seconds.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏅</div>
+            <h3>Badges &amp; Achievements</h3>
+            <p>Bronze, Silver and Gold tiers in every category — graduate from Primary School all the way to Professor.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>Global Leaderboard</h3>
+            <p>Your lifetime Sigma goes on the leaderboard. See how you rank against players around the world.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="band">
+        <section class="section" id="categories">
+          <h2>Seven Great Minds</h2>
+          <p class="section-lead">
+            Each category is harder — and more rewarding — than the last. Collect lifetime Sigma to
+            unlock the next one, or unlock it early with Epsilon.
+          </p>
+          <div class="categories">
+            <div class="category-card">
+              <div class="category-num">C1</div>
+              <h3>Pythagoras' Apprentice</h3>
+              <p>Addition and subtraction to warm up the engine.</p>
+              <span class="category-unlock is-free">Open from the start</span>
+            </div>
+            <div class="category-card">
+              <div class="category-num">C2</div>
+              <h3>Al-Khwarizmi's Multiples</h3>
+              <p>Multiplication and exact division.</p>
+              <span class="category-unlock">500K Σ</span>
+            </div>
+            <div class="category-card">
+              <div class="category-num">C3</div>
+              <h3>Euclid's Labyrinth</h3>
+              <p>Order of operations — watch out for the traps.</p>
+              <span class="category-unlock">1M Σ</span>
+            </div>
+            <div class="category-card">
+              <div class="category-num">C4</div>
+              <h3>Newton's Cell</h3>
+              <p>Nested parentheses, one layer at a time.</p>
+              <span class="category-unlock">2M Σ</span>
+            </div>
+            <div class="category-card">
+              <div class="category-num">C5</div>
+              <h3>Fibonacci's Cipher</h3>
+              <p>Find the pattern and complete the sequence.</p>
+              <span class="category-unlock">4M Σ</span>
+            </div>
+            <div class="category-card">
+              <div class="category-num">C6</div>
+              <h3>Euler's Power</h3>
+              <p>Exponents, roots and factorials.</p>
+              <span class="category-unlock">8M Σ</span>
+            </div>
+            <div class="category-card">
+              <div class="category-num">C7</div>
+              <h3>Gauss Apocalypse</h3>
+              <p>Hybrid chaos with patterns hidden inside.</p>
+              <span class="category-unlock">16M Σ</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="section" id="how-to-play">
+        <h2>How to Play</h2>
+        <p class="section-lead">One level is 20 questions. Four choices, one right answer.</p>
+        <div class="how-to-play">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-title">Pick a Category</div>
+            <div class="step-description">Spin the category wheel and tap an unlocked mathematician to start the next level.</div>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-title">Answer Fast</div>
+            <div class="step-description">You have 20 seconds per question. A wrong answer or a timeout costs a life — lives refill over time.</div>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-title">Level Up</div>
+            <div class="step-description">Collect Sigma and Epsilon, climb from Bronze to Silver to Gold and unlock the next mind.</div>
+          </div>
+        </div>
+        <p class="formula">
+          <strong>Sigma per correct answer</strong> = category base × tier (Bronze ×1 · Silver ×1.35 · Gold ×1.75)
+          × time bonus (up to ×2) × streak (×2) × 100
+        </p>
+      </section>
+
+      <div class="band">
+        <section class="section" id="play">
+          <h2>Try It Now</h2>
+          <p class="section-lead">Five questions from Pythagoras' Apprentice, with the game's real timer and scoring.</p>
+          <div class="demo" id="demo">
+            <div class="demo-hud">
+              <span data-demo="progress"></span>
+              <span class="sigma" data-demo="sigma"></span>
+              <span class="epsilon" data-demo="epsilon"></span>
+            </div>
+            <div class="demo-timer"><div class="demo-timer-bar" data-demo="bar"></div></div>
+            <div class="demo-question" data-demo="question" aria-live="polite"></div>
+            <div class="demo-answers" data-demo="answers"></div>
+            <div class="demo-status" data-demo="status" aria-live="polite"></div>
+            <button type="button" class="demo-start" data-demo="start"></button>
+            <div class="demo-cta" data-demo="cta" hidden>
+              <a href="mailto:contact@math-maker.com?subject=Notify%20me%20when%20MathMaker%20launches">Get notified at launch →</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <a href="/support.html" data-nav="support">Support</a>
+        <a href="/privacy-policy.html" data-nav="privacy">Privacy Policy</a>
+        <a href="/terms-of-service.html" data-nav="terms">Terms of Service</a>
+      </div>
+      <p>© 2026 MathMaker. All rights reserved.</p>
+    </footer>
+
+    <script>
+      window.DEMO_T = {
+        idleTitle: "Ready?",
+        idleText: "5 questions · 20 seconds each",
+        start: "Start",
+        again: "Play again",
+        progress: "Question {n}/{total}",
+        hint: "Pick the right answer.",
+        correct: "Correct! +{sigma} Σ · +{epsilon} ε",
+        wrong: "Wrong answer!",
+        timeout: "Time's up!",
+        doneTitle: "Level complete!",
+        doneText: "{correct}/{total} correct — you earned {sigma} Σ and {epsilon} ε.",
+      };
+    </script>
+    <script src="/demo.js" defer></script>
+  </body>
+</html>
