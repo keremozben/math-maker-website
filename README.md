@@ -1,6 +1,6 @@
 # math-maker.com
 
-Static website for **MathMaker**, the timed math quiz game — hosted on GitHub Pages
+Static website for **MathMaker : Mind Challenge**, the timed math quiz game — hosted on GitHub Pages
 with the custom domain `math-maker.com` (see `CNAME`). Same setup as grid-collection.com.
 
 No framework and no build step: plain HTML, one shared stylesheet and two small scripts.

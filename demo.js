@@ -1,5 +1,5 @@
 /**
- * demo.js — a 5-question taste of MathMaker, played in the browser.
+ * demo.js — a 5-question taste of MathMaker : Mind Challenge, played in the browser.
  *
  * Mirrors the game's real rules for category C1 (Pythagoras' Apprentice,
  * Bronze, Level 1): A ± B with A, B ∈ [2, 44] and no negative results,

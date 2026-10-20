@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MathMaker — unified stylesheet
+   MathMaker : Mind Challenge — unified stylesheet
    Shared by the landing pages (/index.html, /tr/index.html) and the legal
    pages (support / privacy-policy / terms-of-service in EN + TR).
    Colours mirror the app's design tokens (src/styles/base/_tokens.scss).
@@ -237,6 +237,8 @@ nav {
   font-weight: 800;
   line-height: 1.05;
   margin-bottom: 1rem;
+  /* break the long app name before "Mind Challenge", not inside it */
+  text-wrap: balance;
   background: linear-gradient(120deg, #ffffff 30%, var(--color-sky-light));
   -webkit-background-clip: text;
   background-clip: text;
@@ -884,6 +886,15 @@ footer {
     flex-wrap: wrap;
     gap: 0.6rem 1rem;
     padding: 0.75rem 1rem;
+  }
+
+  .logo {
+    /* the full name wraps beside the language picker instead of pushing it down */
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 1.1rem;
+    line-height: 1.15;
+    text-wrap: balance;
   }
 
   .nav-links {
