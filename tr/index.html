@@ -2,36 +2,30 @@
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MathMaker : Mind Challenge — Süreli Matematik Bilgi Yarışması Oyunu</title>
-    <meta
-      name="description"
-      content="MathMaker : Mind Challenge, hızlı tempolu bir matematik bilgi yarışması oyunu. Büyük matematikçilerin adını taşıyan 7 kategori, 2.300 level ve 69.000 soru — zamana karşı cevapla, Sigma topla, bir sonraki meydan okumanın kilidini aç."
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MathMaker : Mind Challenge — Zamana karşı zihninin sınırlarını zorla</title>
+    <meta name="description" content="MathMaker : Mind Challenge: 7 kategori, 3.500 seviye, soru başına 20 saniye. Zamana karşı cevapla, Sigma topla, bir sonraki büyük matematikçinin kilidini aç." />
     <link rel="canonical" href="https://math-maker.com/tr/" />
-    <link rel="icon" href="/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#151f2b" />
-
     <link rel="alternate" hreflang="en" href="https://math-maker.com/" />
     <link rel="alternate" hreflang="tr" href="https://math-maker.com/tr/" />
     <link rel="alternate" hreflang="x-default" href="https://math-maker.com/" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0a1018" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MathMaker : Mind Challenge" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:url" content="https://math-maker.com/tr/" />
     <meta property="og:title" content="MathMaker : Mind Challenge — Süreli Matematik Oyunu" />
-    <meta
-      property="og:description"
-      content="7 kategori, 2.300 level, 69.000 soru. Zamana karşı cevapla, Sigma topla, bir sonraki büyük matematikçinin kilidini aç."
-    />
+    <meta property="og:description" content="Yedi büyük zihin, 3.500 seviye, soru başına 20 saniye. Zamana karşı cevapla, Sigma topla, bir sonraki büyük matematikçinin kilidini aç." />
     <meta property="og:image" content="https://math-maker.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="MathMaker : Mind Challenge — Süreli Matematik Oyunu" />
-    <meta name="twitter:description" content="7 kategori, 2.300 level, 69.000 soru. Zihnin ne kadar hızlı?" />
+    <meta name="twitter:description" content="7 kategori, 3.500 seviye, soru başına 20 saniye. Zihnin ne kadar hızlı?" />
     <meta name="twitter:image" content="https://math-maker.com/og-image.png" />
 
     <script type="application/ld+json">
@@ -39,7 +33,7 @@
         "@context": "https://schema.org",
         "@type": "VideoGame",
         "name": "MathMaker : Mind Challenge",
-        "description": "7 kategori, 2.300 level ve 69.000 sorudan oluşan, hızlı tempolu, süreli çoktan seçmeli matematik bilgi yarışması oyunu.",
+        "description": "7 kategori ve 3.500 seviyeden oluşan, hızlı tempolu, süreli çoktan seçmeli matematik bilgi yarışması oyunu: her seviye tek soru, her soru 20 saniye.",
         "url": "https://math-maker.com/tr/",
         "image": "https://math-maker.com/og-image.png",
         "genre": ["Educational", "Trivia", "Brain Game"],
@@ -50,276 +44,415 @@
       }
     </script>
 
-    <link rel="preload" href="/fonts/exo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/styles.css" />
-    <script src="/lang.js" defer></script>
+    <link rel="preload" href="../assets/fonts/exo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/site.css" />
+    <link rel="stylesheet" href="../assets/home.css" />
+    <script type="module" src="../assets/home.js"></script>
+    <noscript><style>.gate { display: none; } body.is-locked { overflow: auto; } .is-locked .nav { opacity: 1; transform: translateX(-50%); } [data-reveal] { opacity: 1; transform: none; filter: none; }</style></noscript>
   </head>
-  <body>
-    <nav>
-      <div class="nav-container">
-        <a class="logo" href="/tr/" data-nav="home"><img src="/favicon.png" alt="" width="34" height="34" />MathMaker : Mind Challenge</a>
-        <ul class="nav-links">
-          <li><a href="/tr/" class="active" data-nav="home">Ana Sayfa</a></li>
-          <li><a href="/tr/support.html" data-nav="support">Destek</a></li>
-          <li><a href="/tr/privacy-policy.html" data-nav="privacy">Gizlilik</a></li>
-          <li><a href="/tr/terms-of-service.html" data-nav="terms">Koşullar</a></li>
-        </ul>
-        <select class="lang-select" aria-label="Dil" onchange="if(this.value)location.href=this.value">
-          <option value="/">English</option>
-          <option value="/tr/" selected>Türkçe</option>
-        </select>
+  <body class="page page--home is-locked">
+    <svg width="0" height="0" class="visually-hidden" aria-hidden="true">
+      <symbol id="i-compass" viewBox="0 0 100 120"><path d="M46 2h8v13h-8z M50 15a17 17 0 1 1 0 34a17 17 0 1 1 0-34z M50 25.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z M38 44L50 50L22 108L10 116L10 102z M61 57L69 51L90 102L90 116L78 108z" /></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.1 0 3.7 1.2 5.3 3 1.6-1.8 3.2-3 5.3-3 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21z" /></symbol>
+    </svg>
+
+    <canvas class="fx-canvas" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <canvas class="spark-canvas" aria-hidden="true"></canvas>
+    <div class="cursor" aria-hidden="true"><span class="cursor__pin"><svg class="cursor__trace" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" pathLength="1" /></svg><svg class="cursor__compass" viewBox="0 0 100 120"><use href="#i-compass" /></svg></span></div>
+    <div class="progress" aria-hidden="true"><span class="progress__fill"></span></div>
+
+    <!-- Intro gate: unlocks Web Audio with a user gesture -->
+    <div class="gate" role="dialog" aria-modal="true" aria-labelledby="gate-word">
+      <div class="gate__inner">
+        <svg class="gate__logo" viewBox="0 0 100 120" aria-hidden="true"><path d="M46 2h8v13h-8z M50 15a17 17 0 1 1 0 34a17 17 0 1 1 0-34z M50 25.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z M38 44L50 50L22 108L10 116L10 102z M61 57L69 51L90 102L90 116L78 108z" /></svg>
+        <p class="gate__word" id="gate-word" aria-label="MathMaker"></p>
+        <p class="gate__sub">Mind Challenge</p>
+        <div class="gate__meter" aria-hidden="true"><span class="gate__meter-fill"></span></div>
+        <p class="gate__count tnum" aria-hidden="true">000</p>
+        <div class="gate__actions">
+          <button type="button" class="btn btn--primary btn--xl" data-action="enter" data-sound="on" data-magnetic>
+            <span aria-hidden="true">♪</span> <span data-i18n="gate.sound">Sesle gir</span>
+          </button>
+          <button type="button" class="btn btn--ghost btn--xl" data-action="enter" data-sound="off" data-magnetic data-i18n="gate.silent">Sessiz devam et</button>
+        </div>
+        <p class="gate__hint" data-i18n="gate.hint">Kulaklık önerilir · Bu bir matematik deneyimi</p>
+        <div class="lang" role="group" aria-label="Dil / Language">
+          <button type="button" class="lang__btn" data-action="lang" data-lang="tr" aria-pressed="true">TR</button>
+          <button type="button" class="lang__btn" data-action="lang" data-lang="en" aria-pressed="false">EN</button>
+        </div>
       </div>
-    </nav>
+    </div>
 
-    <header class="hero">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <span class="hero-eyebrow">SÜRELİ MATEMATİK OYUNU</span>
-          <h1>MathMaker : Mind Challenge</h1>
-          <p class="hero-tagline">
-            Zihnin sınırlarına hoş geldin. Zamana karşı cevapla, serini koru ve
-            Pisagor'un Çırağı'ndan Gauss Kıyameti'ne kadar yüksel.
-          </p>
-
-          <div class="hero-stats">
-            <div>
-              <div class="stat-number">7</div>
-              <div class="stat-label">Kategori</div>
-            </div>
-            <div>
-              <div class="stat-number">2.300</div>
-              <div class="stat-label">Level</div>
-            </div>
-            <div>
-              <div class="stat-number">69.000</div>
-              <div class="stat-label">Soru</div>
-            </div>
-            <div>
-              <div class="stat-number">16</div>
-              <div class="stat-label">Dil</div>
-            </div>
-          </div>
-
-          <div class="store-badges">
-            <a
-              class="store-badge store-badge--soon"
-              href="mailto:contact@math-maker.com?subject=MathMaker%20%3A%20Mind%20Challenge%20iOS%27ta%20%C3%A7%C4%B1k%C4%B1nca%20haber%20ver"
-              aria-label="App Store — çok yakında, çıkınca e-postayla haber ver"
-            >
-              <img src="/app-store.png" alt="Çok yakında App Store'da" width="160" height="53" />
-              <span class="badge-ribbon">Çok yakında</span>
-            </a>
-            <a
-              class="store-badge store-badge--soon"
-              href="mailto:contact@math-maker.com?subject=MathMaker%20%3A%20Mind%20Challenge%20Android%27de%20%C3%A7%C4%B1k%C4%B1nca%20haber%20ver"
-              aria-label="Google Play — çok yakında, çıkınca e-postayla haber ver"
-            >
-              <img src="/google-play.png" alt="Çok yakında Google Play'de" width="160" height="53" />
-              <span class="badge-ribbon">Çok yakında</span>
-            </a>
-          </div>
-          <p class="hero-note">iPhone, iPad ve Android'de ücretsiz. Çıktığında haber almak için bir rozete dokun.</p>
+    <header class="nav">
+      <a class="nav__brand" href="#top" data-hover>
+        <svg class="mark" aria-hidden="true"><use href="#i-compass" /></svg>
+        <span>MathMaker<span class="nav__brand-sub"> : Mind Challenge</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Bölümler" data-i18n-aria="nav.aria">
+        <a class="nav__link" href="#speed" data-nav="speed" data-i18n="nav.speed">Hız</a>
+        <a class="nav__link" href="#categories" data-nav="categories" data-i18n="nav.categories">Kategoriler</a>
+        <a class="nav__link" href="#play" data-nav="play" data-i18n="nav.play">Oyna</a>
+        <a class="nav__link" href="#journey" data-nav="journey" data-i18n="nav.journey">Yolculuk</a>
+        <a class="nav__link" href="#screens" data-nav="screens" data-i18n="nav.screens">Ekranlar</a>
+      </nav>
+      <div class="nav__tools">
+        <div class="lang" role="group" aria-label="Dil / Language">
+          <button type="button" class="lang__btn" data-action="lang" data-lang="tr" aria-pressed="true">TR</button>
+          <button type="button" class="lang__btn" data-action="lang" data-lang="en" aria-pressed="false">EN</button>
         </div>
-
-        <div class="hero-mockup" aria-hidden="true">
-          <div class="phone-frame">
-            <div class="phone-screen">
-              <div class="mock-top">
-                <span>Level 12</span>
-                <span class="mock-hearts">♥♥♥♥♡</span>
-              </div>
-              <div class="mock-category">Harezmi'nin Katları</div>
-              <div class="mock-timer"><span>14</span></div>
-              <div class="mock-question">7 × 8 = ?</div>
-              <div class="mock-answers">
-                <div class="mock-answer">54</div>
-                <div class="mock-answer is-correct">56</div>
-                <div class="mock-answer">48</div>
-                <div class="mock-answer">64</div>
-              </div>
-              <div class="mock-powerups">
-                <div class="mock-powerup">İPUCU</div>
-                <div class="mock-powerup">50-50</div>
-                <div class="mock-powerup">DEĞİŞ</div>
-                <div class="mock-powerup">+5sn</div>
-              </div>
-              <div class="mock-score">
-                <span class="sigma">12.400 Σ</span>
-                <span class="epsilon">350 ε</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <button type="button" class="sound-btn" data-action="toggle-sound" aria-pressed="false" aria-label="Ses" data-i18n-aria="nav.sound">
+          <span class="sound-btn__bar"></span><span class="sound-btn__bar"></span><span class="sound-btn__bar"></span><span class="sound-btn__bar"></span>
+        </button>
+        <a class="btn btn--primary btn--sm" href="#play" data-magnetic data-i18n="nav.cta">Hemen oyna</a>
       </div>
     </header>
 
-    <main>
-      <section class="section" id="features">
-        <h2>Neden Bırakamayacaksın?</h2>
-        <p class="section-lead">
-          Kısa turlar, net kurallar ve açtığın her matematikçiyle daha da tatlanan bir ödül eğrisi.
-        </p>
-        <div class="features">
-          <div class="feature-card">
-            <div class="feature-icon">⏱</div>
-            <h3>Zamana Karşı</h3>
-            <p>Her soru için 20 saniye. Ne kadar hızlı cevaplarsan zaman bonusu o kadar büyür — 2 kata kadar Sigma.</p>
+    <main class="main">
+      <!-- HERO -->
+      <section class="hero" id="top" data-shape="title">
+        <div class="hero__stage">
+          <h1 class="hero__title">MATHMAKER</h1>
+        </div>
+        <div class="hero__body">
+          <p class="hero__eyebrow">MIND CHALLENGE</p>
+          <p class="hero__tagline"><span data-i18n="hero.tag1">Zamana karşı</span> <em data-i18n="hero.tag2">zihninin sınırlarını</em> <span data-i18n="hero.tag3">zorla.</span></p>
+          <p class="hero__lead" data-i18n="hero.lead">Pisagor'un Çırağı'ndan Gauss Kıyameti'ne yedi büyük zihin. Her seviye tek soru, her soru 20 saniye. Hızlı ol, seriyi koru, Sigma'yı katla.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--xl" href="#play" data-magnetic data-i18n="hero.play">Tarayıcıda dene</a>
+            <a class="btn btn--ghost btn--xl" href="#download" data-magnetic data-i18n="hero.soon">Çok yakında: iOS &amp; Android</a>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">🔥</div>
-            <h3>Strike Serisi</h3>
-            <p>Üst üste 10 doğru yap; ondan sonraki her doğru cevap iki kat değerli.</p>
+          <ul class="hero__stats">
+            <li class="stat"><span class="stat__num tnum" data-count="7">7</span><span class="stat__label" data-i18n="stat.cats">Kategori</span></li>
+            <li class="stat"><span class="stat__num tnum" data-count="3500">3.500</span><span class="stat__label" data-i18n="stat.levels">Seviye</span></li>
+            <li class="stat"><span class="stat__num tnum" data-count="20">20</span><span class="stat__label" data-i18n="stat.seconds">Saniye</span></li>
+            <li class="stat"><span class="stat__num tnum" data-count="16">16</span><span class="stat__label" data-i18n="stat.langs">Dil</span></li>
+          </ul>
+        </div>
+        <p class="hero__hint" aria-hidden="true" data-i18n="hero.hint">Parçacıklara tıkla</p>
+        <div class="scroll-cue" aria-hidden="true"><span data-i18n="hero.scroll">Kaydır</span><span class="scroll-cue__line"></span></div>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span class="marquee__item">16 + 45 − 23</span><span class="marquee__item marquee__item--hot">Σ</span><span class="marquee__item">7 × 8</span><span class="marquee__item marquee__item--hot">ε</span><span class="marquee__item">(4 + 9) × 3</span><span class="marquee__item marquee__item--hot">√144</span><span class="marquee__item">1, 1, 2, 3, 5, 8, ?</span><span class="marquee__item marquee__item--hot">5!</span><span class="marquee__item">2¹⁰</span><span class="marquee__item marquee__item--hot">×2</span><span class="marquee__item">12 + 6 × 4</span><span class="marquee__item marquee__item--hot">20s</span>
+          <span class="marquee__item">16 + 45 − 23</span><span class="marquee__item marquee__item--hot">Σ</span><span class="marquee__item">7 × 8</span><span class="marquee__item marquee__item--hot">ε</span><span class="marquee__item">(4 + 9) × 3</span><span class="marquee__item marquee__item--hot">√144</span><span class="marquee__item">1, 1, 2, 3, 5, 8, ?</span><span class="marquee__item marquee__item--hot">5!</span><span class="marquee__item">2¹⁰</span><span class="marquee__item marquee__item--hot">×2</span><span class="marquee__item">12 + 6 × 4</span><span class="marquee__item marquee__item--hot">20s</span>
+        </div>
+      </div>
+
+      <!-- PITCH -->
+      <section class="pitch" data-shape="question" data-sticky aria-labelledby="pitch-title">
+        <div class="pitch__sticky" data-sticky-inner>
+          <div>
+            <h2 class="visually-hidden" id="pitch-title" data-i18n="pitch.title">Oyun nasıl işler</h2>
+            <div class="pitch__lines">
+              <p class="pitch__line" data-i18n="pitch.l1">Dört şık.</p>
+              <p class="pitch__line" data-i18n="pitch.l2">Tek doğru.</p>
+              <p class="pitch__line" data-i18n="pitch.l3">Yirmi saniye.</p>
+            </div>
+            <p class="pitch__sub" data-i18n="pitch.sub">Her seviye tek bir soru. Doğru cevap seni bir sonraki seviyeye taşır; yanlış cevap bir canına mal olur. Beş canın var, her 30 dakikada biri geri gelir.</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">Σ</div>
-            <h3>Sigma ve Epsilon</h3>
-            <p>Sigma (Σ) hem skorun hem yeni kategorilerin anahtarı. Epsilon (ε) ile güçlendirici alır, kategorileri erken açarsın.</p>
+          <div class="pitch__art" data-shape-anchor="question"></div>
+        </div>
+      </section>
+
+      <!-- TIMER -->
+      <section class="timer" id="speed" data-shape="ring" data-sticky aria-labelledby="timer-title">
+        <div class="timer__sticky" data-sticky-inner>
+          <div class="timer__copy">
+            <span class="eyebrow" data-i18n="timer.eyebrow">01 · Hız</span>
+            <h2 class="headline headline--md" id="timer-title"><span data-i18n="timer.t1">Her saniye</span> <span class="headline__glow" data-i18n="timer.t2">Sigma'dır.</span></h2>
+            <p class="lead" data-i18n="timer.lead">Ne kadar erken cevaplarsan zaman çarpanı o kadar büyür. Aşağı kaydır, saati sen işlet.</p>
+            <p class="timer__mult tnum" aria-live="polite">×2.0</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">✦</div>
-            <h3>Güçlendiriciler</h3>
-            <p>Takıldın mı? İpucu al, 50-50 kullan, soruyu değiştir ya da 5 saniye ek süre kap.</p>
+          <div class="timer__dial" data-shape-anchor="ring" data-zone="ok">
+            <svg class="timer__svg" viewBox="0 0 100 100" aria-hidden="true">
+              <g class="timer__ticks"></g>
+              <circle class="timer__track" cx="50" cy="50" r="46" />
+              <circle class="timer__arc" cx="50" cy="50" r="46" />
+            </svg>
+            <div class="timer__readout">
+              <span class="timer__num tnum">20</span>
+              <span class="timer__unit" data-i18n="timer.unit">saniye</span>
+            </div>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">🏅</div>
-            <h3>Rozetler ve Kazanımlar</h3>
-            <p>Her kategoride Bronz, Gümüş ve Altın aşama — İlkokul'dan başlayıp Profesör'e kadar mezun ol.</p>
+          <ol class="timer__brackets">
+            <li class="bracket" data-min="16"><span class="bracket__range" data-i18n="timer.b1">16–20 sn kala</span><span class="bracket__mult tnum">×2.0</span></li>
+            <li class="bracket" data-min="12"><span class="bracket__range" data-i18n="timer.b2">12–16 sn kala</span><span class="bracket__mult tnum">×1.8</span></li>
+            <li class="bracket" data-min="8"><span class="bracket__range" data-i18n="timer.b3">8–12 sn kala</span><span class="bracket__mult tnum">×1.4</span></li>
+            <li class="bracket" data-min="4"><span class="bracket__range" data-i18n="timer.b4">4–8 sn kala</span><span class="bracket__mult tnum">×1.2</span></li>
+            <li class="bracket" data-min="0"><span class="bracket__range" data-i18n="timer.b5">0–4 sn kala</span><span class="bracket__mult tnum">×1.0</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- CATEGORIES -->
+      <section class="section cats" id="categories" data-shape="heptagon" aria-labelledby="cats-title">
+        <div class="shell">
+          <div class="section-head">
+            <span class="eyebrow" data-i18n="cats.eyebrow">02 · Yedi büyük zihin</span>
+            <h2 class="headline" id="cats-title" data-reveal><span data-i18n="cats.t1">Bir çark.</span> <span class="headline__glow" data-i18n="cats.t2">Yedi efsane.</span></h2>
+            <p class="lead" data-reveal data-i18n="cats.lead">Her kategori bir öncekinden zor ve daha ödüllü. Toplam Sigma'n büyüdükçe çarkın bir sonraki köşesi aydınlanır. Bir düğüme dokun ya da üzerinde gezin: her matematikçinin kendi notası var.</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">🏆</div>
-            <h3>Küresel Sıralama</h3>
-            <p>Toplam Sigma'n sıralama tablosuna yazılır. Dünyanın dört bir yanındaki oyunculara karşı yerini gör.</p>
+          <div class="cats__grid">
+            <div class="wheel" data-shape-anchor="heptagon">
+              <svg class="wheel__edges" viewBox="0 0 100 100" aria-hidden="true"></svg>
+              <div class="wheel__center" aria-hidden="true">
+                <svg class="wheel__compass"><use href="#i-compass" /></svg>
+                <span class="wheel__start" data-i18n="cats.start">BAŞLA</span>
+              </div>
+              <!-- nodes are inserted from CATS -->
+            </div>
+            <article class="cat-panel" aria-live="polite">
+              <div class="cat-panel__top">
+                <span class="cat-panel__id" data-cat="id">C1</span>
+                <div>
+                  <h3 class="cat-panel__name" data-cat="name">Pisagor'un Çırağı</h3>
+                  <p class="cat-panel__topic" data-cat="topic">Toplama ve çıkarma</p>
+                </div>
+              </div>
+              <div class="cat-panel__sample">
+                <span class="cat-panel__qlabel" data-i18n="cats.sample">Örnek soru · canlı üretildi</span>
+                <span class="cat-panel__q" data-cat="q">16 + 45 − 23</span>
+              </div>
+              <dl class="cat-panel__facts">
+                <div class="fact"><dt data-i18n="cats.base">Taban Σ</dt><dd class="tnum" data-cat="base">10</dd></div>
+                <div class="fact"><dt data-i18n="cats.eps">ε / soru</dt><dd class="tnum" data-cat="eps">10 · 20 · 30</dd></div>
+                <div class="fact"><dt data-i18n="cats.unlock">Açılış</dt><dd class="tnum" data-cat="unlock">Açık</dd></div>
+              </dl>
+              <div class="cat-panel__badges">
+                <span class="badge-chip"><img src="../assets/img/bronze.png" alt="" /><span data-cat="b1">İlkokul 1</span></span>
+                <span class="badge-chip"><img src="../assets/img/silver.png" alt="" /><span data-cat="b2">İlkokul 3</span></span>
+                <span class="badge-chip"><img src="../assets/img/gold.png" alt="" /><span data-cat="b3">İlkokul 5</span></span>
+              </div>
+            </article>
+          </div>
+          <div class="climb" data-reveal-class>
+            <p class="climb__title" data-i18n="cats.climb">Açılış eşikleri · toplam Sigma (ya da Epsilon ile erken aç)</p>
+            <div class="climb__bars"></div>
           </div>
         </div>
       </section>
 
-      <div class="band">
-        <section class="section" id="categories">
-          <h2>Yedi Büyük Zihin</h2>
-          <p class="section-lead">
-            Her kategori bir öncekinden daha zor — ve daha ödüllü. Bir sonrakini açmak için toplam
-            Sigma biriktir ya da Epsilon ile erkenden aç.
-          </p>
-          <div class="categories">
-            <div class="category-card">
-              <div class="category-num">C1</div>
-              <h3>Pisagor'un Çırağı</h3>
-              <p>Motoru ısıtmak için toplama ve çıkarma.</p>
-              <span class="category-unlock is-free">Baştan açık</span>
-            </div>
-            <div class="category-card">
-              <div class="category-num">C2</div>
-              <h3>Harezmi'nin Katları</h3>
-              <p>Çarpma ve tam bölme.</p>
-              <span class="category-unlock">500 bin Σ</span>
-            </div>
-            <div class="category-card">
-              <div class="category-num">C3</div>
-              <h3>Öklid'in Labirenti</h3>
-              <p>İşlem önceliği — tuzaklara dikkat.</p>
-              <span class="category-unlock">1 milyon Σ</span>
-            </div>
-            <div class="category-card">
-              <div class="category-num">C4</div>
-              <h3>Newton'un Hücresi</h3>
-              <p>İç içe parantezler, katman katman.</p>
-              <span class="category-unlock">2 milyon Σ</span>
-            </div>
-            <div class="category-card">
-              <div class="category-num">C5</div>
-              <h3>Fibonacci'nin Şifresi</h3>
-              <p>Örüntüyü bul, diziyi tamamla.</p>
-              <span class="category-unlock">4 milyon Σ</span>
-            </div>
-            <div class="category-card">
-              <div class="category-num">C6</div>
-              <h3>Euler'in Gücü</h3>
-              <p>Üsler, kökler ve faktöriyeller.</p>
-              <span class="category-unlock">8 milyon Σ</span>
-            </div>
-            <div class="category-card">
-              <div class="category-num">C7</div>
-              <h3>Gauss Kıyameti</h3>
-              <p>İçine örüntüler gizlenmiş hibrit kaos.</p>
-              <span class="category-unlock">16 milyon Σ</span>
-            </div>
+      <!-- PLAY -->
+      <section class="section play" id="play" data-shape="cloud" aria-labelledby="play-title">
+        <div class="shell">
+          <div class="section-head section-head--center">
+            <span class="eyebrow" data-i18n="play.eyebrow">03 · Şimdi dene</span>
+            <h2 class="headline" id="play-title" data-reveal><span data-i18n="play.t1">Saat</span> <span class="headline__glow" data-i18n="play.t2">işliyor.</span></h2>
+            <p class="lead" data-reveal data-i18n="play.lead">Oyunun gerçek kurallarıyla tarayıcıda bir tur: 20 saniye, 4 şık, 5 can, jokerler ve 10 doğrudan sonra ×2 strike. Klavye: 1–4.</p>
           </div>
-        </section>
-      </div>
 
-      <section class="section" id="how-to-play">
-        <h2>Nasıl Oynanır?</h2>
-        <p class="section-lead">Bir level 20 sorudan oluşur. Dört şık, tek doğru cevap.</p>
-        <div class="how-to-play">
-          <div class="step-card">
-            <div class="step-number">1</div>
-            <div class="step-title">Kategorini Seç</div>
-            <div class="step-description">Kategori çarkını çevir ve açık bir matematikçiye dokunarak sıradaki level'a başla.</div>
-          </div>
-          <div class="step-card">
-            <div class="step-number">2</div>
-            <div class="step-title">Hızlı Cevapla</div>
-            <div class="step-description">Her soru için 20 saniyen var. Yanlış cevap ya da süre bitimi bir can götürür — canlar zamanla dolar.</div>
-          </div>
-          <div class="step-card">
-            <div class="step-number">3</div>
-            <div class="step-title">Yüksel</div>
-            <div class="step-description">Sigma ve Epsilon topla, Bronz'dan Gümüş'e, oradan Altın'a çık ve bir sonraki zihnin kilidini aç.</div>
+          <div class="arena" data-arena>
+            <aside class="arena__side">
+              <div class="panel">
+                <span class="panel__label" data-i18n="play.category">Kategori</span>
+                <span class="panel__name" data-g="catName">Pisagor'un Çırağı</span>
+              </div>
+              <div class="panel">
+                <span class="panel__label" data-i18n="play.level">Seviye</span>
+                <span class="panel__value tnum" data-g="level">1</span>
+                <div class="tierbar"><span class="tierbar__fill" data-g="tierFill"></span></div>
+                <span class="factor__note tnum" data-g="tierText">Bronz 1/100</span>
+              </div>
+              <div class="panel">
+                <span class="panel__label" data-i18n="play.lives">Canlar</span>
+                <div class="hearts" data-g="hearts"></div>
+              </div>
+            </aside>
+
+            <div class="arena__center">
+              <div class="ring" data-g="ring" data-zone="ok">
+                <svg class="ring__svg" viewBox="0 0 100 100" aria-hidden="true">
+                  <circle class="ring__track" cx="50" cy="50" r="42" />
+                  <circle class="ring__arc" cx="50" cy="50" r="42" />
+                </svg>
+                <span class="ring__num tnum" data-g="time">20</span>
+              </div>
+              <p class="arena__question tnum" data-g="question" aria-live="assertive">?</p>
+              <p class="arena__hint" data-g="hint"></p>
+              <div class="arena__answers" data-g="answers">
+                <button type="button" class="answer tnum" data-action="answer" data-index="0"><span class="answer__key">1</span><span data-g="opt">–</span></button>
+                <button type="button" class="answer tnum" data-action="answer" data-index="1"><span class="answer__key">2</span><span data-g="opt">–</span></button>
+                <button type="button" class="answer tnum" data-action="answer" data-index="2"><span class="answer__key">3</span><span data-g="opt">–</span></button>
+                <button type="button" class="answer tnum" data-action="answer" data-index="3"><span class="answer__key">4</span><span data-g="opt">–</span></button>
+              </div>
+              <div class="arena__powerups">
+                <button type="button" class="pu-btn" data-action="pu" data-pu="hint" aria-label="İpucu" data-i18n-aria="pu.hint"><img src="../assets/img/pu-idea.png" alt="" /><span class="pu-btn__count tnum" data-pu-count="hint">1</span></button>
+                <button type="button" class="pu-btn" data-action="pu" data-pu="fifty" aria-label="50-50" data-i18n-aria="pu.fifty"><img src="../assets/img/pu-graphic.png" alt="" /><span class="pu-btn__count tnum" data-pu-count="fifty">2</span></button>
+                <button type="button" class="pu-btn" data-action="pu" data-pu="change" aria-label="Soruyu Değiştir" data-i18n-aria="pu.change"><img src="../assets/img/pu-shuffle.png" alt="" /><span class="pu-btn__count tnum" data-pu-count="change">3</span></button>
+                <button type="button" class="pu-btn" data-action="pu" data-pu="time" aria-label="+5 Saniye" data-i18n-aria="pu.time"><img src="../assets/img/pu-timer.png" alt="" /><span class="pu-btn__count tnum" data-pu-count="time">3</span></button>
+              </div>
+            </div>
+
+            <aside class="arena__side">
+              <div class="panel">
+                <span class="panel__label">Sigma</span>
+                <span class="panel__value panel__value--sigma tnum" data-g="sigma">0</span>
+              </div>
+              <div class="panel">
+                <span class="panel__label">Epsilon</span>
+                <span class="panel__value panel__value--eps tnum" data-g="eps">0</span>
+              </div>
+              <div class="panel">
+                <span class="panel__label" data-i18n="play.streak">Strike serisi</span>
+                <div class="streak" data-g="streak"></div>
+                <span class="streak__label tnum" data-g="streakText">0 / 10</span>
+              </div>
+            </aside>
+
+            <div class="arena__overlay" data-g="start">
+              <p class="arena__overlay-title" data-i18n="play.pick">Bir zihin seç.</p>
+              <div class="arena__picker" data-chips="play" role="group" aria-label="Kategori" data-i18n-aria="play.category"></div>
+              <button type="button" class="btn btn--primary btn--xl" data-action="start" data-magnetic data-i18n="play.start">Başla</button>
+              <p class="arena__keys" data-i18n="play.keys">Demo'da yedi kategorinin hepsi açık. Kısayollar: 1–4 cevap, Enter başlat.</p>
+            </div>
+            <div class="arena__overlay" data-g="over" hidden>
+              <p class="arena__overlay-title" data-g="overTitle">Canların bitti!</p>
+              <div class="summary">
+                <div class="panel"><span class="panel__label" data-i18n="play.sumLevels">Seviye</span><span class="panel__value tnum" data-g="sumLevels">0</span></div>
+                <div class="panel"><span class="panel__label">Sigma</span><span class="panel__value panel__value--sigma tnum" data-g="sumSigma">0</span></div>
+                <div class="panel"><span class="panel__label">Epsilon</span><span class="panel__value panel__value--eps tnum" data-g="sumEps">0</span></div>
+                <div class="panel"><span class="panel__label" data-i18n="play.sumStreak">En iyi seri</span><span class="panel__value tnum" data-g="sumStreak">0</span></div>
+              </div>
+              <p class="lead" data-g="bestText"></p>
+              <button type="button" class="btn btn--primary btn--xl" data-action="restart" data-magnetic data-i18n="play.again">Tekrar oyna</button>
+            </div>
           </div>
         </div>
-        <p class="formula">
-          <strong>Doğru cevap başına Sigma</strong> = kategori tabanı × aşama (Bronz ×1 · Gümüş ×1,35 · Altın ×1,75)
-          × zaman bonusu (×2'ye kadar) × seri (×2) × 100
-        </p>
       </section>
 
-      <div class="band">
-        <section class="section" id="play">
-          <h2>Hemen Dene</h2>
-          <p class="section-lead">Pisagor'un Çırağı'ndan beş soru — oyundaki gerçek süre ve puanlamayla.</p>
-          <div class="demo" id="demo">
-            <div class="demo-hud">
-              <span data-demo="progress"></span>
-              <span class="sigma" data-demo="sigma"></span>
-              <span class="epsilon" data-demo="epsilon"></span>
-            </div>
-            <div class="demo-timer"><div class="demo-timer-bar" data-demo="bar"></div></div>
-            <div class="demo-question" data-demo="question" aria-live="polite"></div>
-            <div class="demo-answers" data-demo="answers"></div>
-            <div class="demo-status" data-demo="status" aria-live="polite"></div>
-            <button type="button" class="demo-start" data-demo="start"></button>
-            <div class="demo-cta" data-demo="cta" hidden>
-              <a href="mailto:contact@math-maker.com?subject=MathMaker%20%3A%20Mind%20Challenge%20%C3%A7%C4%B1k%C4%B1nca%20haber%20ver">Çıkınca haber ver →</a>
+      <!-- JOURNEY -->
+      <section class="section journey" id="journey" data-shape="n500" aria-labelledby="journey-title">
+        <div class="shell">
+          <div class="section-head">
+            <span class="eyebrow" data-i18n="journey.eyebrow">04 · Yolculuk</span>
+            <h2 class="headline" id="journey-title" data-reveal><span data-i18n="journey.t1">500 seviye.</span> <span class="headline__glow" data-i18n="journey.t2">Üç madalya.</span></h2>
+            <p class="lead" data-reveal data-i18n="journey.lead">Her kategoride Bronz, Gümüş ve Altın aşamalar. Aşamayı bitirdiğinde rozet senin; yedi kategori boyunca İlkokul'dan Profesör'e mezun olursun.</p>
+          </div>
+          <div class="medals" data-shape-anchor="n500">
+            <figure class="medal" style="--i: 0; --glow-c: #cd7f32;">
+              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="../assets/img/bronze.png" alt="" /><img class="medal__face medal__face--back" src="../assets/img/bronze.png" alt="" /></div>
+              <figcaption><span class="medal__tier" data-i18n="tier.bronze">Bronz</span><br /><span class="medal__range" data-i18n="journey.r1">Seviye 1 – 100</span></figcaption>
+            </figure>
+            <figure class="medal" style="--i: 1; --glow-c: #cfd8e3;">
+              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="../assets/img/silver.png" alt="" /><img class="medal__face medal__face--back" src="../assets/img/silver.png" alt="" /></div>
+              <figcaption><span class="medal__tier" data-i18n="tier.silver">Gümüş</span><br /><span class="medal__range" data-i18n="journey.r2">Seviye 101 – 300 · Σ ×1,35</span></figcaption>
+            </figure>
+            <figure class="medal" style="--i: 2; --glow-c: #ffc35a;">
+              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="../assets/img/gold.png" alt="" /><img class="medal__face medal__face--back" src="../assets/img/gold.png" alt="" /></div>
+              <figcaption><span class="medal__tier" data-i18n="tier.gold">Altın</span><br /><span class="medal__range" data-i18n="journey.r3">Seviye 301 – 500 · Σ ×1,75</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="ladder" data-reveal-class aria-label="Mezuniyet merdiveni" data-i18n-aria="journey.ladder"></div>
+
+          <div class="extras">
+            <article class="card" data-tilt data-reveal>
+              <div class="card__art"><button type="button" class="chest" data-action="chest" aria-label="Sandığı aç" data-i18n-aria="journey.chestOpen"><img src="../assets/img/treasure-chest.svg" alt="" /></button></div>
+              <h3 class="card__title" data-i18n="journey.chestT">Her 10 seviyede bir sandık</h3>
+              <p class="card__text" data-i18n="journey.chestP">Kazanımlar haritasında ilerledikçe sandıklar açılır: Sigma, Epsilon ve her 50 seviyede bir joker. Sandığa tıkla.</p>
+            </article>
+            <article class="card" data-tilt data-reveal style="--delay: 0.1s;">
+              <div class="card__art"><div class="gifts" data-gifts></div></div>
+              <h3 class="card__title" data-i18n="journey.giftT">Günlük hediye</h3>
+              <p class="card__text" data-i18n="journey.giftP">Her 24 saatte bir 3×3 kutudan birini seç: Epsilon, joker ya da can. Kutulara dokun.</p>
+            </article>
+            <article class="card" data-tilt data-reveal style="--delay: 0.2s;">
+              <div class="card__art">
+                <div>
+                  <div class="lives">
+                    <span class="heart"><svg><use href="#i-heart" /></svg></span><span class="heart"><svg><use href="#i-heart" /></svg></span><span class="heart"><svg><use href="#i-heart" /></svg></span><span class="heart"><svg><use href="#i-heart" /></svg></span><span class="heart"><svg><use href="#i-heart" /></svg></span>
+                  </div>
+                  <p class="lives__clock tnum" data-lives-clock>29:59</p>
+                </div>
+              </div>
+              <h3 class="card__title" data-i18n="journey.livesT">5 can, 30 dakikada bir yenilenir</h3>
+              <p class="card__text" data-i18n="journey.livesP">Yanlış cevap ya da süre dolumu bir can götürür. Beklemek istemezsen ödüllü reklam ya da Epsilon ile doldur.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- POWER-UPS -->
+      <section class="section powerups" data-shape="cloud" aria-labelledby="pu-title">
+        <div class="shell">
+          <div class="section-head section-head--center">
+            <span class="eyebrow" data-i18n="pu.eyebrow">05 · Jokerler</span>
+            <h2 class="headline" id="pu-title" data-reveal><span data-i18n="pu.t1">Takıldın mı?</span> <span class="headline__glow" data-i18n="pu.t2">Hile değil, strateji.</span></h2>
+            <p class="lead" data-reveal data-i18n="pu.lead">Her joker türünden 3'er hakla başlarsın. Bitince Epsilon ile al ya da kısa bir reklam izle.</p>
+          </div>
+          <div class="pus">
+            <article class="card pu-card" data-tilt data-reveal><img class="pu-card__img" src="../assets/img/pu-idea.png" alt="" /><h3 class="card__title" data-i18n="pu.hint">İpucu</h3><p class="card__text" data-i18n="pu.hintP">Cevaba giden yolu fısıldar.</p><span class="pu-card__cost tnum">900 ε</span></article>
+            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.08s;"><img class="pu-card__img" src="../assets/img/pu-graphic.png" alt="" /><h3 class="card__title" data-i18n="pu.fifty">50-50</h3><p class="card__text" data-i18n="pu.fiftyP">İki yanlış şık buharlaşır.</p><span class="pu-card__cost tnum">600 ε</span></article>
+            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.16s;"><img class="pu-card__img" src="../assets/img/pu-shuffle.png" alt="" /><h3 class="card__title" data-i18n="pu.change">Soruyu Değiştir</h3><p class="card__text" data-i18n="pu.changeP">Aynı seviyeden yepyeni bir soru.</p><span class="pu-card__cost tnum">450 ε</span></article>
+            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.24s;"><img class="pu-card__img" src="../assets/img/pu-timer.png" alt="" /><h3 class="card__title" data-i18n="pu.time">+5 Saniye</h3><p class="card__text" data-i18n="pu.timeP">Saate beş saniye ekler.</p><span class="pu-card__cost tnum">300 ε</span></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREENS -->
+      <section class="section screens" id="screens" data-shape="cloud" aria-labelledby="screens-title">
+        <div class="shell">
+          <div class="section-head section-head--center">
+            <span class="eyebrow" data-i18n="screens.eyebrow">06 · Uygulama</span>
+            <h2 class="headline" id="screens-title" data-reveal><span data-i18n="screens.t1">Cebindeki</span> <span class="headline__glow" data-i18n="screens.t2">beyin jimnastiği.</span></h2>
+          </div>
+          <div class="carousel" data-carousel>
+            <div class="carousel__ring">
+              <figure class="phone" style="--i: 0;"><img class="phone__screen" data-screen="01-home" src="../assets/screens/tr/01-home.png" alt="Ana sayfa: kategori çarkı" data-i18n-alt="screens.home" /><figcaption class="phone__label" data-i18n="screens.homeL">Kategori çarkı</figcaption></figure>
+              <figure class="phone" style="--i: 1;"><img class="phone__screen" data-screen="02-game" src="../assets/screens/tr/02-game.png" alt="Oyun ekranı" data-i18n-alt="screens.game" /><figcaption class="phone__label" data-i18n="screens.gameL">20 saniye</figcaption></figure>
+              <figure class="phone" style="--i: 2;"><img class="phone__screen" data-screen="03-fifty" src="../assets/screens/tr/03-fifty.png" alt="50-50 jokeri" data-i18n-alt="screens.fifty" /><figcaption class="phone__label" data-i18n="screens.fiftyL">50-50 jokeri</figcaption></figure>
+              <figure class="phone" style="--i: 3;"><img class="phone__screen" data-screen="08-achievements" src="../assets/screens/tr/08-achievements.png" alt="Kazanımlar haritası" data-i18n-alt="screens.ach" /><figcaption class="phone__label" data-i18n="screens.achL">Kazanımlar</figcaption></figure>
+              <figure class="phone" style="--i: 4;"><img class="phone__screen" data-screen="09-store-1" src="../assets/screens/tr/09-store-1.png" alt="Mağaza" data-i18n-alt="screens.store" /><figcaption class="phone__label" data-i18n="screens.storeL">Mağaza</figcaption></figure>
             </div>
           </div>
-        </section>
-      </div>
+          <p class="carousel__hint" data-i18n="screens.hint">Sürükle ve döndür</p>
+        </div>
+      </section>
+
+      <!-- TRUST -->
+      <section class="section trust" data-shape="n16" aria-labelledby="trust-title">
+        <div class="shell">
+          <div class="section-head">
+            <span class="eyebrow" data-i18n="trust.eyebrow">07 · Detaylar</span>
+            <h2 class="headline headline--md" id="trust-title" data-reveal><span data-i18n="trust.t1">Küçük ayrıntılar,</span> <span class="headline__glow" data-i18n="trust.t2">büyük fark.</span></h2>
+          </div>
+          <div class="tiles" data-shape-anchor="n16">
+            <article class="card" data-tilt data-reveal><span class="tile__icon" aria-hidden="true">🔒</span><h3 class="card__title" data-i18n="trust.a">Hesap yok</h3><p class="card__text" data-i18n="trust.aP">İlerlemen yalnızca cihazında saklanır. Kayıt, şifre, e-posta istemeyiz.</p></article>
+            <article class="card" data-tilt data-reveal style="--delay: 0.06s;"><span class="tile__icon" aria-hidden="true">🌍</span><h3 class="card__title" data-i18n="trust.b">16 dil</h3><p class="card__text" data-i18n="trust.bP">Türkçe'den Japonca'ya; matematikçilerin adları bile senin dilinde.</p></article>
+            <article class="card" data-tilt data-reveal style="--delay: 0.12s;"><span class="tile__icon" aria-hidden="true">🏆</span><h3 class="card__title" data-i18n="trust.c">Küresel sıralama</h3><p class="card__text" data-i18n="trust.cP">Game Center ve Google Play Games'te 1 genel + 7 kategori tablosu.</p></article>
+            <article class="card" data-tilt data-reveal style="--delay: 0.18s;"><span class="tile__icon" aria-hidden="true">📳</span><h3 class="card__title" data-i18n="trust.d">Hissedilen geri bildirim</h3><p class="card__text" data-i18n="trust.dP">Doğruda, yanlışta ve rozette ayrı titreşim deseni.</p></article>
+            <article class="card" data-tilt data-reveal style="--delay: 0.24s;"><span class="tile__icon" aria-hidden="true">↩</span><h3 class="card__title" data-i18n="trust.e">Kaldığın yerden</h3><p class="card__text" data-i18n="trust.eP">Uygulamayı kapat, geri dön: aynı soru, aynı seri seni bekler.</p></article>
+            <article class="card" data-tilt data-reveal style="--delay: 0.3s;"><span class="tile__icon" aria-hidden="true">✦</span><h3 class="card__title" data-i18n="trust.f">Ücretsiz oyna</h3><p class="card__text" data-i18n="trust.fP">İstersen reklamları kaldır, kategorileri erken aç; zorunlu değil.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section cta" id="download" data-shape="compass" aria-labelledby="cta-title">
+        <div class="cta__inner">
+          <div class="cta__art" data-shape-anchor="compass"></div>
+          <h2 class="cta__title" id="cta-title" data-reveal><span data-i18n="cta.t1">Zihnin</span><br /><span class="headline__glow" data-i18n="cta.t2">hazır mı?</span></h2>
+          <p class="lead" data-reveal data-i18n="cta.lead">MathMaker çok yakında App Store ve Google Play'de. Çıktığı gün haber almak için bir rozete dokun.</p>
+          <div class="stores" data-reveal>
+            <a class="store" href="mailto:contact@math-maker.com?subject=MathMaker%20iOS" data-magnetic aria-label="App Store — çok yakında" data-i18n-aria="cta.ios"><img src="../assets/img/app-store.png" alt="" /><span class="store__ribbon" data-i18n="cta.soon">Çok yakında</span></a>
+            <a class="store" href="mailto:contact@math-maker.com?subject=MathMaker%20Android" data-magnetic aria-label="Google Play — çok yakında" data-i18n-aria="cta.android"><img src="../assets/img/google-play.png" alt="" /><span class="store__ribbon" data-i18n="cta.soon">Çok yakında</span></a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer shell">
+        <span>© 2026 MathMaker : Mind Challenge</span>
+        <nav class="footer__links" aria-label="Yasal" data-i18n-aria="footer.aria">
+          <a href="support.html" data-link="support" data-i18n="footer.support">Destek</a>
+          <a href="privacy-policy.html" data-link="privacy" data-i18n="footer.privacy">Gizlilik</a>
+          <a href="terms-of-service.html" data-link="terms" data-i18n="footer.terms">Koşullar</a>
+        </nav>
+        <span data-i18n="footer.note">Exo yazı tipi · SIL OFL</span>
+      </footer>
     </main>
 
-    <footer>
-      <div class="footer-links">
-        <a href="/tr/support.html" data-nav="support">Destek</a>
-        <a href="/tr/privacy-policy.html" data-nav="privacy">Gizlilik Politikası</a>
-        <a href="/tr/terms-of-service.html" data-nav="terms">Kullanım Koşulları</a>
-      </div>
-      <p>© 2026 MathMaker : Mind Challenge. Tüm hakları saklıdır.</p>
-    </footer>
-
-    <script>
-      window.DEMO_T = {
-        idleTitle: "Hazır mısın?",
-        idleText: "5 soru · her biri 20 saniye",
-        start: "Başla",
-        again: "Tekrar oyna",
-        progress: "Soru {n}/{total}",
-        hint: "Doğru cevabı seç.",
-        correct: "Doğru! +{sigma} Σ · +{epsilon} ε",
-        wrong: "Yanlış cevap!",
-        timeout: "Süre doldu!",
-        doneTitle: "Level tamamlandı!",
-        doneText: "{correct}/{total} doğru — {sigma} Σ ve {epsilon} ε kazandın.",
-      };
-    </script>
-    <script src="/demo.js" defer></script>
+    <template id="tpl-float"><span class="float-reward"></span></template>
   </body>
 </html>

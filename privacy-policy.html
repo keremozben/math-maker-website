@@ -11,30 +11,51 @@
     <link rel="alternate" hreflang="x-default" href="https://math-maker.com/privacy-policy.html" />
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#151f2b" />
-    <link rel="stylesheet" href="/styles.css" />
-    <script src="/lang.js" defer></script>
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0a1018" />
+    <link rel="preload" href="assets/fonts/exo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/site.css" />
+    <script src="assets/site.js" defer></script>
   </head>
-  <body>
-    <nav>
-      <div class="nav-container">
-        <a class="logo" href="/" data-nav="home"><img src="/favicon.png" alt="" width="34" height="34" />MathMaker : Mind Challenge</a>
-        <ul class="nav-links">
-          <li><a href="/" data-nav="home">Home</a></li>
-          <li><a href="/support.html" data-nav="support">Support</a></li>
-          <li><a href="/privacy-policy.html" data-nav="privacy" class="active">Privacy</a></li>
-          <li><a href="/terms-of-service.html" data-nav="terms">Terms</a></li>
-        </ul>
-        <select class="lang-select" aria-label="Language" onchange="if(this.value)location.href=this.value">
-          <option value="/privacy-policy.html" selected>English</option>
-          <option value="/tr/privacy-policy.html">Türkçe</option>
-        </select>
-      </div>
-    </nav>
+  <body class="page page--inner">
+    <svg width="0" height="0" class="visually-hidden" aria-hidden="true">
+      <symbol id="i-compass" viewBox="0 0 100 120"><path d="M46 2h8v13h-8z M50 15a17 17 0 1 1 0 34a17 17 0 1 1 0-34z M50 25.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z M38 44L50 50L22 108L10 116L10 102z M61 57L69 51L90 102L90 116L78 108z" /></symbol>
+    </svg>
+    <canvas class="dust" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"><span class="cursor__pin"><svg class="cursor__trace" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" pathLength="1" /></svg><svg class="cursor__compass" viewBox="0 0 100 120"><use href="#i-compass" /></svg></span></div>
+    <div class="progress" aria-hidden="true"><span class="progress__fill"></span></div>
 
-    <main class="content">
-      <h1>MathMaker : Mind Challenge Privacy Policy</h1>
-        <p class="updated">Last updated: October 20, 2026</p>
+    <header class="nav nav--pages">
+      <a class="nav__brand" href="./" data-nav="home">
+        <svg class="mark" aria-hidden="true"><use href="#i-compass" /></svg>
+        <span>MathMaker<span class="nav__brand-sub"> : Mind Challenge</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Site">
+        <a class="nav__link" href="./" data-nav="home">Home</a>
+        <a class="nav__link" href="support.html" data-nav="support">Support</a>
+        <a class="nav__link nav__link--active" href="privacy-policy.html" data-nav="privacy" aria-current="page">Privacy</a>
+        <a class="nav__link" href="terms-of-service.html" data-nav="terms">Terms</a>
+      </nav>
+      <div class="nav__tools">
+        <div class="lang" role="group" aria-label="Language"><a class="lang__btn" href="tr/privacy-policy.html" hreflang="tr" lang="tr" data-lang="tr">TR</a><a class="lang__btn" href="privacy-policy.html" data-lang="en" aria-current="page">EN</a></div>
+        <a class="btn btn--primary btn--sm" href="./#play" data-nav="play" data-magnetic>Play now</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="page-hero shell">
+        <span class="eyebrow">Legal</span>
+        <h1 class="headline page-hero__title"><span class="headline__glow">MathMaker : Mind Challenge Privacy Policy</span></h1>
+        <div class="page-hero__meta"><p class="updated chip-note">Last updated: October 20, 2026</p></div>
+      </section>
+
+      <div class="doc shell">
+        <aside class="doc__toc" aria-labelledby="toc-title">
+          <p class="doc__toc-title" id="toc-title">On this page</p>
+          <ol class="toc" data-toc></ol>
+        </aside>
+        <article class="doc__body card prose" data-toc-source>
 <h2>1. About this policy</h2>
 <p>MathMaker : Mind Challenge is a math quiz game for iOS and Android made by an independent developer. This policy explains what information the game collects, why, and the choices you have. It applies to the MathMaker : Mind Challenge app and to the math-maker.com website.</p>
 
@@ -83,15 +104,18 @@
 
 <h2>12. Contact</h2>
 <p>Questions about privacy? Email us at <a href="mailto:contact@math-maker.com">contact@math-maker.com</a>.</p>
+        </article>
+      </div>
     </main>
 
-    <footer>
-      <div class="footer-links">
-        <a href="/support.html" data-nav="support">Support</a>
-        <a href="/privacy-policy.html" data-nav="privacy">Privacy Policy</a>
-        <a href="/terms-of-service.html" data-nav="terms">Terms of Service</a>
-      </div>
-      <p>© 2026 MathMaker : Mind Challenge. All rights reserved.</p>
+    <footer class="footer shell">
+      <span>© 2026 MathMaker : Mind Challenge. All rights reserved.</span>
+      <nav class="footer__links" aria-label="Legal">
+        <a href="support.html" data-nav="support">Support</a>
+        <a href="privacy-policy.html" data-nav="privacy" aria-current="page">Privacy Policy</a>
+        <a href="terms-of-service.html" data-nav="terms">Terms of Service</a>
+      </nav>
+      <span>Exo typeface · SIL OFL</span>
     </footer>
   </body>
 </html>

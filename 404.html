@@ -6,21 +6,40 @@
     <title>Page not found - MathMaker : Mind Challenge</title>
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="/styles.css" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0a1018" />
+    <!-- GitHub Pages serves this file for any missing path, so every URL here is root-absolute. -->
+    <link rel="stylesheet" href="/assets/site.css" />
+    <script src="/assets/site.js" defer></script>
   </head>
-  <body>
-    <nav>
-      <div class="nav-container">
-        <a class="logo" href="/"><img src="/favicon.png" alt="" width="34" height="34" />MathMaker : Mind Challenge</a>
-      </div>
-    </nav>
-    <main class="content">
-      <h1>404 ÷ 0 = ?</h1>
-      <p>That page doesn't exist. <a href="/">Back to the home page</a></p>
-      <p lang="tr">Bu sayfa bulunamadı. <a href="/tr/">Ana sayfaya dön</a></p>
+  <body class="page page--inner">
+    <svg width="0" height="0" class="visually-hidden" aria-hidden="true">
+      <symbol id="i-compass" viewBox="0 0 100 120"><path d="M46 2h8v13h-8z M50 15a17 17 0 1 1 0 34a17 17 0 1 1 0-34z M50 25.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z M38 44L50 50L22 108L10 116L10 102z M61 57L69 51L90 102L90 116L78 108z" /></symbol>
+    </svg>
+    <canvas class="dust" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"><span class="cursor__pin"><svg class="cursor__trace" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" pathLength="1" /></svg><svg class="cursor__compass" viewBox="0 0 100 120"><use href="#i-compass" /></svg></span></div>
+
+    <header class="nav nav--pages">
+      <a class="nav__brand" href="/">
+        <svg class="mark" aria-hidden="true"><use href="#i-compass" /></svg>
+        <span>MathMaker<span class="nav__brand-sub"> : Mind Challenge</span></span>
+      </a>
+    </header>
+
+    <main class="main">
+      <section class="lost shell">
+        <div class="lost__inner">
+          <svg class="lost__mark" aria-hidden="true"><use href="#i-compass" /></svg>
+          <h1 class="lost__title"><span class="headline__glow">404 ÷ 0 = ?</span></h1>
+          <p class="lost__text">That page doesn't exist. <a href="/">Back to the home page</a></p>
+          <p class="lost__text" lang="tr">Bu sayfa bulunamadı. <a href="/tr/">Ana sayfaya dön</a></p>
+        </div>
+      </section>
     </main>
-    <footer>
-      <p>© 2026 MathMaker : Mind Challenge. All rights reserved.</p>
+
+    <footer class="footer shell">
+      <span>© 2026 MathMaker : Mind Challenge. All rights reserved.</span>
     </footer>
   </body>
 </html>
