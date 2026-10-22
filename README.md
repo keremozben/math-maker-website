@@ -79,9 +79,10 @@ Inspector (WhatsApp caches hard: test with `?v=2`).
 
 ### Changing the measurement ID
 
-The ID lives **only** in `assets/analytics-config.js` (`GA_MEASUREMENT_ID`). To switch to the real
-web stream, replace its value with the `G-…` ID from GA4 › Admin › Data streams, then commit and
-push. Nothing else references the ID — there is no gtag snippet in the HTML.
+The ID lives **only** in `assets/analytics-config.js` (`GA_MEASUREMENT_ID`) and is the real ID of
+the GA4 web stream "math-maker.com Website". To change it, replace its value with the `G-…` ID
+from GA4 › Admin › Data streams, then commit and push. Nothing else references the ID — there is
+no gtag snippet in the HTML.
 
 ### Consent (Consent Mode v2, basic)
 
@@ -159,24 +160,26 @@ Tag links posted elsewhere so GA4 shows the channel:
 ## Store links
 
 `store.config.json` drives every store link; `null` = "Coming soon" (the badges are `mailto:`
-links, as today):
+links, as today). The App Store campaign token is already in place — the provider token from
+App Store Connect › App Analytics › Campaigns (account-wide, so it covers MathMaker too). While
+`ios` is `null` it has no effect on the pages:
 
 ```json
 {
   "ios": null,
   "android": null,
-  "iosCampaignToken": null
+  "iosCampaignToken": "128707729"
 }
 ```
 
-At launch, fill in what is live and run the script (idempotent; setting a value back to `null`
-restores the "Coming soon" state):
+At launch, fill in **only** the `ios` / `android` links of what is live and run the script
+(idempotent; setting a link back to `null` restores the "Coming soon" state):
 
 ```json
 {
   "ios": "https://apps.apple.com/app/id6817337911",
   "android": "https://play.google.com/store/apps/details?id=com.mathmaker.games",
-  "iosCampaignToken": "<provider token from App Store Connect › App Analytics › Campaigns>"
+  "iosCampaignToken": "128707729"
 }
 ```
 
