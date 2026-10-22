@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Source of /og-image.png (1200×630). Re-render: node brand-assets/capture.mjs -->
+<!-- Source of /og-image.png (EN) and /og-image-tr.png (?lang=tr), 1200×630. Re-render: node brand-assets/capture.mjs -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,6 +13,19 @@
         font-family: "Exo";
         font-weight: 600;
         src: url("../assets/fonts/exo-latin-600-normal.woff2") format("woff2");
+      }
+      /* Turkish letters (İ, Ş, Ğ…) live in the latin-ext files. */
+      @font-face {
+        font-family: "Exo";
+        font-weight: 800;
+        src: url("../assets/fonts/exo-latin-ext-800-normal.woff2") format("woff2");
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F;
+      }
+      @font-face {
+        font-family: "Exo";
+        font-weight: 600;
+        src: url("../assets/fonts/exo-latin-ext-600-normal.woff2") format("woff2");
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F;
       }
       * {
         margin: 0;
@@ -142,12 +155,12 @@
   <body>
     <div class="canvas">
       <div class="left">
-        <span class="eyebrow">TIMED MATH QUIZ</span>
+        <span class="eyebrow" data-tr="SÜRELİ MATEMATİK BİLGİ YARIŞMASI">TIMED MATH QUIZ</span>
         <div class="brand">
           <img src="app-icon-256.png" alt="" />
           <h1>MathMaker : Mind Challenge</h1>
         </div>
-        <p class="stats"><b>7</b> categories · <b>3,500</b> levels · <b>16</b> languages</p>
+        <p class="stats" data-tr="&lt;b&gt;7&lt;/b&gt; kategori · &lt;b&gt;3.500&lt;/b&gt; seviye · &lt;b&gt;16&lt;/b&gt; dil"><b>7</b> categories · <b>3,500</b> levels · <b>16</b> languages</p>
       </div>
       <div class="card">
         <div class="timer"><span>14</span></div>
@@ -160,5 +173,12 @@
         </div>
       </div>
     </div>
+    <script>
+      // ?lang=tr → the Turkish card (og-image-tr.png).
+      if (new URLSearchParams(location.search).get("lang") === "tr") {
+        document.documentElement.lang = "tr";
+        document.querySelectorAll("[data-tr]").forEach((el) => (el.innerHTML = el.dataset.tr));
+      }
+    </script>
   </body>
 </html>

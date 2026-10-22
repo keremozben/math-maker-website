@@ -18,6 +18,21 @@
   var ROOT = new URL("../", script ? script.src : location.href);
 
   // ---------------------------------------------------------------
+  // Analytics — the same consent banner and track() as the landing page
+  // (assets/measure.js), loaded on the side so a blocked script changes nothing.
+  // Clicks are declarative (data-track on mailto and language links).
+  // ---------------------------------------------------------------
+  var pageLink = document.querySelector(".nav [data-nav][aria-current='page']");
+  var page = pageLink && pageLink.getAttribute("data-nav");
+  import(new URL("assets/measure.js", ROOT).href)
+    .then(function (m) {
+      if (page) m.track("legal_view", { page: page });
+    })
+    .catch(function () {
+      /* blocked or unsupported: no analytics */
+    });
+
+  // ---------------------------------------------------------------
   // Language memory
   // ---------------------------------------------------------------
   var LANGS = { en: "", tr: "tr/" };

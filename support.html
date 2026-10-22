@@ -13,6 +13,69 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#0a1018" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- store:meta — written by tools/apply-store-config.mjs -->
+    <!-- /store:meta -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MathMaker : Mind Challenge" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="tr_TR" />
+    <meta property="og:url" content="https://math-maker.com/support.html" />
+    <meta property="og:title" content="Support - MathMaker : Mind Challenge" />
+    <meta property="og:description" content="Support and contact for the MathMaker : Mind Challenge math quiz game." />
+    <meta property="og:image" content="https://math-maker.com/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MathMaker : Mind Challenge — timed math quiz game: 7 categories, 3,500 levels, 16 languages" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Support - MathMaker : Mind Challenge" />
+    <meta name="twitter:description" content="Support and contact for the MathMaker : Mind Challenge math quiz game." />
+    <meta name="twitter:image" content="https://math-maker.com/og-image.png" />
+    <meta name="twitter:image:alt" content="MathMaker : Mind Challenge — timed math quiz game: 7 categories, 3,500 levels, 16 languages" />
+
+    <script type="application/ld+json" id="ld-faq">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I restore my purchases?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Open the Store in the game and tap Restore Purchases. Permanent unlocks (Remove Ads, category unlocks) come back on the same Apple ID or Google Play account. Consumable items such as Epsilon packs cannot be restored once they have been delivered."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will I lose my progress if I reinstall?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Your progress is saved only on your device and is not backed up to our servers, so uninstalling the game or switching devices starts the game from the beginning. Permanent purchases can still be restored with Restore Purchases."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do lives work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You have up to 5 lives. A wrong answer or a timeout costs one, and one life refills every 30 minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I delete my data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Uninstalling the game deletes all game data on your device — we do not keep a copy. For other data, such as purchase records, email contact@math-maker.com — see section 9 of our Privacy Policy."
+            }
+          }
+        ]
+      }
+    </script>
+
     <link rel="preload" href="assets/fonts/exo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/site.css" />
     <script src="assets/site.js" defer></script>
@@ -38,7 +101,7 @@
         <a class="nav__link" href="terms-of-service.html" data-nav="terms">Terms</a>
       </nav>
       <div class="nav__tools">
-        <div class="lang" role="group" aria-label="Language"><a class="lang__btn" href="tr/support.html" hreflang="tr" lang="tr" data-lang="tr">TR</a><a class="lang__btn" href="support.html" data-lang="en" aria-current="page">EN</a></div>
+        <div class="lang" role="group" aria-label="Language"><a class="lang__btn" href="tr/support.html" hreflang="tr" lang="tr" data-lang="tr" data-track="lang_switch" data-track-from="en" data-track-to="tr">TR</a><a class="lang__btn" href="support.html" data-lang="en" aria-current="page">EN</a></div>
         <a class="btn btn--primary btn--sm" href="./#play" data-nav="play" data-magnetic>Play now</a>
       </div>
     </header>
@@ -51,9 +114,9 @@
       </section>
 
       <div class="contacts shell">
-        <div class="contact-card card" data-tilt data-reveal style="--delay: 0.00s;"><span class="contact-card__icon" aria-hidden="true">🎮</span><h2>Game support &amp; bug reports</h2><p>Problems with the game, a question you think is wrong, or a bug: <a href="mailto:support@math-maker.com">support@math-maker.com</a>. Please include your device model and the app version (shown on the splash screen and on the Information screen — the <strong>i</strong> button in the game).</p></div>
-        <div class="contact-card card" data-tilt data-reveal style="--delay: 0.08s;"><span class="contact-card__icon" aria-hidden="true">💬</span><h2>General information</h2><p>Questions about MathMaker : Mind Challenge: <a href="mailto:info@math-maker.com">info@math-maker.com</a></p></div>
-        <div class="contact-card card" data-tilt data-reveal style="--delay: 0.16s;"><span class="contact-card__icon" aria-hidden="true">🔒</span><h2>Privacy, data deletion &amp; other requests</h2><p>Data requests, feature ideas and everything else: <a href="mailto:contact@math-maker.com">contact@math-maker.com</a></p></div>
+        <div class="contact-card card" data-tilt data-reveal style="--delay: 0.00s;"><span class="contact-card__icon" aria-hidden="true">🎮</span><h2>Game support &amp; bug reports</h2><p>Problems with the game, a question you think is wrong, or a bug: <a href="mailto:support@math-maker.com" data-track="support_contact" data-track-mailto="support" data-track-page="support">support@math-maker.com</a>. Please include your device model and the app version (shown on the splash screen and on the Information screen — the <strong>i</strong> button in the game).</p></div>
+        <div class="contact-card card" data-tilt data-reveal style="--delay: 0.08s;"><span class="contact-card__icon" aria-hidden="true">💬</span><h2>General information</h2><p>Questions about MathMaker : Mind Challenge: <a href="mailto:info@math-maker.com" data-track="support_contact" data-track-mailto="info" data-track-page="support">info@math-maker.com</a></p></div>
+        <div class="contact-card card" data-tilt data-reveal style="--delay: 0.16s;"><span class="contact-card__icon" aria-hidden="true">🔒</span><h2>Privacy, data deletion &amp; other requests</h2><p>Data requests, feature ideas and everything else: <a href="mailto:contact@math-maker.com" data-track="support_contact" data-track-mailto="contact" data-track-page="support">contact@math-maker.com</a></p></div>
       </div>
 
       <section class="support-faq shell" aria-labelledby="faq-title">
@@ -62,7 +125,7 @@
           <div class="faq__item card prose" data-reveal style="--delay: 0.00s;"><p><strong>How do I restore my purchases?</strong><br />Open the Store in the game and tap <strong>Restore Purchases</strong>. Permanent unlocks (Remove Ads, category unlocks) come back on the same Apple ID or Google Play account. Consumable items such as Epsilon packs cannot be restored once they have been delivered.</p></div>
           <div class="faq__item card prose" data-reveal style="--delay: 0.08s;"><p><strong>Will I lose my progress if I reinstall?</strong><br />Yes. Your progress is saved only on your device and is not backed up to our servers, so uninstalling the game or switching devices starts the game from the beginning. Permanent purchases can still be restored with <strong>Restore Purchases</strong>.</p></div>
           <div class="faq__item card prose" data-reveal style="--delay: 0.00s;"><p><strong>How do lives work?</strong><br />You have up to 5 lives. A wrong answer or a timeout costs one, and one life refills every 30 minutes.</p></div>
-          <div class="faq__item card prose" data-reveal style="--delay: 0.08s;"><p><strong>How do I delete my data?</strong><br />Uninstalling the game deletes all game data on your device — we do not keep a copy. For other data, such as purchase records, email <a href="mailto:contact@math-maker.com">contact@math-maker.com</a> — see section 9 of our <a href="/privacy-policy.html">Privacy Policy</a>.</p></div>
+          <div class="faq__item card prose" data-reveal style="--delay: 0.08s;"><p><strong>How do I delete my data?</strong><br />Uninstalling the game deletes all game data on your device — we do not keep a copy. For other data, such as purchase records, email <a href="mailto:contact@math-maker.com" data-track="support_contact" data-track-mailto="contact" data-track-page="support">contact@math-maker.com</a> — see section 9 of our <a href="/privacy-policy.html">Privacy Policy</a>.</p></div>
         </div>
       </section>
     </main>
@@ -73,6 +136,7 @@
         <a href="support.html" data-nav="support" aria-current="page">Support</a>
         <a href="privacy-policy.html" data-nav="privacy">Privacy Policy</a>
         <a href="terms-of-service.html" data-nav="terms">Terms of Service</a>
+        <button type="button" class="footer__consent" data-consent-open>Cookie preferences</button>
       </nav>
       <span>Exo typeface · SIL OFL</span>
     </footer>

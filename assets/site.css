@@ -1,7 +1,7 @@
 /* ============================================================
    MathMaker : Mind Challenge — shared site styles (V2 design).
    Every page loads this file; the landing page adds home.css.
-   Source of the design: design-prototypes/website in the app repo.
+   Edited directly in this repo (the single source of the site).
    ============================================================ */
 
 /* ============================================================
@@ -89,7 +89,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 body.is-locked { overflow: hidden; }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; height: auto; }
 button, input { font: inherit; color: inherit; }
 button { cursor: pointer; }
 a { color: inherit; }
@@ -229,6 +229,23 @@ h1, h2, h3, p { margin: 0; }
 .footer__links { display: flex; gap: var(--space-6); }
 .footer__links a { color: var(--c-muted); text-decoration: none; display: inline-flex; align-items: center; min-height: 2.75rem; }
 .footer__links a:hover, .footer__links a[aria-current='page'] { color: var(--c-accent-hot); }
+.footer__consent { padding: 0; border: 0; background: none; color: var(--c-muted); font: inherit; cursor: pointer; display: inline-flex; align-items: center; min-height: 2.75rem; }
+.footer__consent:hover { color: var(--c-accent-hot); }
+
+/* --- Consent banner (assets/measure.js) — above the landing gate, never covering it --- */
+.consent {
+  position: fixed; z-index: 85; left: 50%; bottom: var(--space-6); transform: translateX(-50%);
+  width: min(46rem, 100% - var(--space-8)); display: grid; grid-template-columns: 1fr auto; align-items: center; gap: var(--space-3) var(--space-6);
+  padding: var(--space-4) var(--space-4) var(--space-4) var(--space-6); border: 1px solid var(--c-line-strong); border-radius: var(--radius-md);
+  background: rgba(14, 21, 31, 0.94); backdrop-filter: blur(18px); box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.55);
+  color: var(--c-muted); font-size: 0.95rem; line-height: 1.45; animation: consent-in 0.5s var(--ease-out);
+}
+.consent__text { margin: 0; }
+.consent__text a { color: var(--c-accent-hot); }
+.consent__now { grid-column: 1; margin: 0; color: var(--c-faint); font-size: 0.85rem; }
+.consent__actions { grid-column: 2; grid-row: 1 / span 2; display: flex; gap: var(--space-2); }
+.consent__btn { min-width: 7.5rem; padding: 0 var(--space-4); }
+@keyframes consent-in { from { opacity: 0; transform: translate(-50%, 1rem); } }
 
 /* ============================================================
    5. Inner pages — support, privacy, terms, 404
@@ -335,6 +352,9 @@ h1, h2, h3, p { margin: 0; }
   .toc__link { padding: var(--space-1) var(--space-3); }
   .footer { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
   .footer__links { flex-wrap: wrap; gap: 0 var(--space-6); }
+  .consent { grid-template-columns: 1fr; bottom: var(--space-4); padding: var(--space-4); }
+  .consent__actions { grid-column: 1; grid-row: auto; }
+  .consent__btn { flex: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }

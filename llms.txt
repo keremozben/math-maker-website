@@ -1,0 +1,20 @@
+# MathMaker : Mind Challenge
+
+> A timed, multiple-choice math quiz game for iPhone and Android phones. Every level is one question with four choices and 20 seconds on the clock; fast correct answers earn more points (Sigma). 7 categories × 500 levels = 3,500 levels, 16 languages, free to play with optional in-app purchases and ads.
+
+- Status: coming soon to the App Store (app id 6817337911) and Google Play (package com.mathmaker.games); not released yet.
+- Categories, from easiest to hardest: Pythagoras' Apprentice (addition and subtraction), Al-Khwarizmi's Multiples (multiplication and exact division), Euclid's Labyrinth (order of operations without brackets), Newton's Cell (nested brackets), Fibonacci's Cipher (number sequences), Euler's Power (powers, roots, factorials), Gauss Apocalypse (all of them mixed, with hidden sequences).
+- Each category has Bronze (levels 1–100), Silver (101–300) and Gold (301–500) tiers with a badge for each.
+- Rules: 5 lives (one refills every 30 minutes), a wrong answer or timeout costs a life; power-ups Hint, 50-50, Swap Question and +5 Seconds; a ×2 strike bonus after 10 correct answers in a row; time multiplier from ×1.0 to ×2.0.
+- Points (Sigma) unlock the next category and count on Game Center / Google Play Games leaderboards (1 global + 7 category boards). Epsilon is the in-game currency.
+- No account: progress is stored only on the device.
+- Languages: English, Turkish, German, Spanish, French, Italian, Brazilian Portuguese, Polish, Indonesian, Vietnamese, Russian, Hindi, Simplified Chinese, Traditional Chinese, Japanese, Korean.
+- Made by an independent developer (Kerem Özben). Contact: contact@math-maker.com · support: support@math-maker.com
+
+## Pages
+
+- [Home (English)](https://math-maker.com/): overview and a playable browser round
+- [Ana sayfa (Türkçe)](https://math-maker.com/tr/): the same in Turkish
+- [Support and FAQ](https://math-maker.com/support.html)
+- [Privacy Policy](https://math-maker.com/privacy-policy.html)
+- [Terms of Service](https://math-maker.com/terms-of-service.html)

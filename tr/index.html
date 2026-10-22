@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MathMaker : Mind Challenge — Zamana karşı zihninin sınırlarını zorla</title>
+    <title>MathMaker : Mind Challenge — Süreli Matematik Oyunu</title>
     <meta name="description" content="MathMaker : Mind Challenge: 7 kategori, 3.500 seviye, soru başına 20 saniye. Zamana karşı cevapla, Sigma topla, bir sonraki büyük matematikçinin kilidini aç." />
     <link rel="canonical" href="https://math-maker.com/tr/" />
     <link rel="alternate" hreflang="en" href="https://math-maker.com/" />
@@ -13,34 +13,81 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#0a1018" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- store:meta — written by tools/apply-store-config.mjs -->
+    <!-- /store:meta -->
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MathMaker : Mind Challenge" />
     <meta property="og:locale" content="tr_TR" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:url" content="https://math-maker.com/tr/" />
     <meta property="og:title" content="MathMaker : Mind Challenge — Süreli Matematik Oyunu" />
     <meta property="og:description" content="Yedi büyük zihin, 3.500 seviye, soru başına 20 saniye. Zamana karşı cevapla, Sigma topla, bir sonraki büyük matematikçinin kilidini aç." />
-    <meta property="og:image" content="https://math-maker.com/og-image.png" />
+    <meta property="og:image" content="https://math-maker.com/og-image-tr.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MathMaker : Mind Challenge — süreli matematik bilgi yarışması: 7 kategori, 3.500 seviye, 16 dil" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="MathMaker : Mind Challenge — Süreli Matematik Oyunu" />
     <meta name="twitter:description" content="7 kategori, 3.500 seviye, soru başına 20 saniye. Zihnin ne kadar hızlı?" />
-    <meta name="twitter:image" content="https://math-maker.com/og-image.png" />
+    <meta name="twitter:image" content="https://math-maker.com/og-image-tr.png" />
+    <meta name="twitter:image:alt" content="MathMaker : Mind Challenge — süreli matematik bilgi yarışması: 7 kategori, 3.500 seviye, 16 dil" />
 
-    <script type="application/ld+json">
+    <script type="application/ld+json" id="ld-game">
       {
         "@context": "https://schema.org",
         "@type": "VideoGame",
         "name": "MathMaker : Mind Challenge",
         "description": "7 kategori ve 3.500 seviyeden oluşan, hızlı tempolu, süreli çoktan seçmeli matematik bilgi yarışması oyunu: her seviye tek soru, her soru 20 saniye.",
         "url": "https://math-maker.com/tr/",
-        "image": "https://math-maker.com/og-image.png",
-        "genre": ["Educational", "Trivia", "Brain Game"],
-        "gamePlatform": ["iOS", "Android"],
+        "image": "https://math-maker.com/og-image-tr.png",
+        "screenshot": [
+          "https://math-maker.com/assets/screens/tr/01-home.webp",
+          "https://math-maker.com/assets/screens/tr/02-game.webp",
+          "https://math-maker.com/assets/screens/tr/03-fifty.webp",
+          "https://math-maker.com/assets/screens/tr/08-achievements.webp",
+          "https://math-maker.com/assets/screens/tr/09-store-1.webp"
+        ],
+        "genre": [
+          "Educational",
+          "Trivia",
+          "Brain Game"
+        ],
+        "gamePlatform": [
+          "iOS",
+          "Android"
+        ],
         "applicationCategory": "GameApplication",
         "operatingSystem": "iOS, Android",
-        "inLanguage": ["en", "tr", "de", "es", "fr", "it", "pt-BR", "pl", "id", "vi", "ru", "hi", "zh-Hans", "zh-Hant", "ja", "ko"]
+        "inLanguage": [
+          "en",
+          "tr",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "pt-BR",
+          "pl",
+          "id",
+          "vi",
+          "ru",
+          "hi",
+          "zh-Hans",
+          "zh-Hant",
+          "ja",
+          "ko"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kerem Özben"
+        }
       }
     </script>
 
@@ -110,9 +157,9 @@
 
     <main class="main">
       <!-- HERO -->
-      <section class="hero" id="top" data-shape="title">
+      <section class="hero" id="top" data-section="hero" data-shape="title">
         <div class="hero__stage">
-          <h1 class="hero__title">MATHMAKER</h1>
+          <h1 class="hero__title">MATHMAKER<span class="visually-hidden" data-i18n="hero.h1"> : Mind Challenge — süreli matematik oyunu</span></h1>
         </div>
         <div class="hero__body">
           <p class="hero__eyebrow">MIND CHALLENGE</p>
@@ -120,7 +167,9 @@
           <p class="hero__lead" data-i18n="hero.lead">Pisagor'un Çırağı'ndan Gauss Kıyameti'ne yedi büyük zihin. Her seviye tek soru, her soru 20 saniye. Hızlı ol, seriyi koru, Sigma'yı katla.</p>
           <div class="hero__actions">
             <a class="btn btn--primary btn--xl" href="#play" data-magnetic data-i18n="hero.play">Tarayıcıda dene</a>
+            <!-- store:hero — written by tools/apply-store-config.mjs -->
             <a class="btn btn--ghost btn--xl" href="#download" data-magnetic data-i18n="hero.soon">Çok yakında: iOS &amp; Android</a>
+            <!-- /store:hero -->
           </div>
           <ul class="hero__stats">
             <li class="stat"><span class="stat__num tnum" data-count="7">7</span><span class="stat__label" data-i18n="stat.cats">Kategori</span></li>
@@ -141,7 +190,7 @@
       </div>
 
       <!-- PITCH -->
-      <section class="pitch" data-shape="question" data-sticky aria-labelledby="pitch-title">
+      <section class="pitch" data-section="pitch" data-shape="question" data-sticky aria-labelledby="pitch-title">
         <div class="pitch__sticky" data-sticky-inner>
           <div>
             <h2 class="visually-hidden" id="pitch-title" data-i18n="pitch.title">Oyun nasıl işler</h2>
@@ -157,7 +206,7 @@
       </section>
 
       <!-- TIMER -->
-      <section class="timer" id="speed" data-shape="ring" data-sticky aria-labelledby="timer-title">
+      <section class="timer" id="speed" data-section="speed" data-shape="ring" data-sticky aria-labelledby="timer-title">
         <div class="timer__sticky" data-sticky-inner>
           <div class="timer__copy">
             <span class="eyebrow" data-i18n="timer.eyebrow">01 · Hız</span>
@@ -187,7 +236,7 @@
       </section>
 
       <!-- CATEGORIES -->
-      <section class="section cats" id="categories" data-shape="heptagon" aria-labelledby="cats-title">
+      <section class="section cats" id="categories" data-section="categories" data-shape="heptagon" aria-labelledby="cats-title">
         <div class="shell">
           <div class="section-head">
             <span class="eyebrow" data-i18n="cats.eyebrow">02 · Yedi büyük zihin</span>
@@ -221,9 +270,9 @@
                 <div class="fact"><dt data-i18n="cats.unlock">Açılış</dt><dd class="tnum" data-cat="unlock">Açık</dd></div>
               </dl>
               <div class="cat-panel__badges">
-                <span class="badge-chip"><img src="../assets/img/bronze.png" alt="" /><span data-cat="b1">İlkokul 1</span></span>
-                <span class="badge-chip"><img src="../assets/img/silver.png" alt="" /><span data-cat="b2">İlkokul 3</span></span>
-                <span class="badge-chip"><img src="../assets/img/gold.png" alt="" /><span data-cat="b3">İlkokul 5</span></span>
+                <span class="badge-chip"><img src="../assets/img/bronze.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /><span data-cat="b1">İlkokul 1</span></span>
+                <span class="badge-chip"><img src="../assets/img/silver.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /><span data-cat="b2">İlkokul 3</span></span>
+                <span class="badge-chip"><img src="../assets/img/gold.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /><span data-cat="b3">İlkokul 5</span></span>
               </div>
             </article>
           </div>
@@ -235,7 +284,7 @@
       </section>
 
       <!-- PLAY -->
-      <section class="section play" id="play" data-shape="cloud" aria-labelledby="play-title">
+      <section class="section play" id="play" data-section="play" data-shape="cloud" aria-labelledby="play-title">
         <div class="shell">
           <div class="section-head section-head--center">
             <span class="eyebrow" data-i18n="play.eyebrow">03 · Şimdi dene</span>
@@ -278,10 +327,10 @@
                 <button type="button" class="answer tnum" data-action="answer" data-index="3"><span class="answer__key">4</span><span data-g="opt">–</span></button>
               </div>
               <div class="arena__powerups">
-                <button type="button" class="pu-btn" data-action="pu" data-pu="hint" aria-label="İpucu" data-i18n-aria="pu.hint"><img src="../assets/img/pu-idea.png" alt="" /><span class="pu-btn__count tnum" data-pu-count="hint">1</span></button>
-                <button type="button" class="pu-btn" data-action="pu" data-pu="fifty" aria-label="50-50" data-i18n-aria="pu.fifty"><img src="../assets/img/pu-graphic.png" alt="" /><span class="pu-btn__count tnum" data-pu-count="fifty">2</span></button>
-                <button type="button" class="pu-btn" data-action="pu" data-pu="change" aria-label="Soruyu Değiştir" data-i18n-aria="pu.change"><img src="../assets/img/pu-shuffle.png" alt="" /><span class="pu-btn__count tnum" data-pu-count="change">3</span></button>
-                <button type="button" class="pu-btn" data-action="pu" data-pu="time" aria-label="+5 Saniye" data-i18n-aria="pu.time"><img src="../assets/img/pu-timer.png" alt="" /><span class="pu-btn__count tnum" data-pu-count="time">3</span></button>
+                <button type="button" class="pu-btn" data-action="pu" data-pu="hint" aria-label="İpucu" data-i18n-aria="pu.hint"><img src="../assets/img/pu-idea.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><span class="pu-btn__count tnum" data-pu-count="hint">1</span></button>
+                <button type="button" class="pu-btn" data-action="pu" data-pu="fifty" aria-label="50-50" data-i18n-aria="pu.fifty"><img src="../assets/img/pu-graphic.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><span class="pu-btn__count tnum" data-pu-count="fifty">2</span></button>
+                <button type="button" class="pu-btn" data-action="pu" data-pu="change" aria-label="Soruyu Değiştir" data-i18n-aria="pu.change"><img src="../assets/img/pu-shuffle.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><span class="pu-btn__count tnum" data-pu-count="change">3</span></button>
+                <button type="button" class="pu-btn" data-action="pu" data-pu="time" aria-label="+5 Saniye" data-i18n-aria="pu.time"><img src="../assets/img/pu-timer.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><span class="pu-btn__count tnum" data-pu-count="time">3</span></button>
               </div>
             </div>
 
@@ -323,7 +372,7 @@
       </section>
 
       <!-- JOURNEY -->
-      <section class="section journey" id="journey" data-shape="n500" aria-labelledby="journey-title">
+      <section class="section journey" id="journey" data-section="journey" data-shape="n500" aria-labelledby="journey-title">
         <div class="shell">
           <div class="section-head">
             <span class="eyebrow" data-i18n="journey.eyebrow">04 · Yolculuk</span>
@@ -332,15 +381,15 @@
           </div>
           <div class="medals" data-shape-anchor="n500">
             <figure class="medal" style="--i: 0; --glow-c: #cd7f32;">
-              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="../assets/img/bronze.png" alt="" /><img class="medal__face medal__face--back" src="../assets/img/bronze.png" alt="" /></div>
+              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="../assets/img/bronze.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /><img class="medal__face medal__face--back" src="../assets/img/bronze.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /></div>
               <figcaption><span class="medal__tier" data-i18n="tier.bronze">Bronz</span><br /><span class="medal__range" data-i18n="journey.r1">Seviye 1 – 100</span></figcaption>
             </figure>
             <figure class="medal" style="--i: 1; --glow-c: #cfd8e3;">
-              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="../assets/img/silver.png" alt="" /><img class="medal__face medal__face--back" src="../assets/img/silver.png" alt="" /></div>
+              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="../assets/img/silver.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /><img class="medal__face medal__face--back" src="../assets/img/silver.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /></div>
               <figcaption><span class="medal__tier" data-i18n="tier.silver">Gümüş</span><br /><span class="medal__range" data-i18n="journey.r2">Seviye 101 – 300 · Σ ×1,35</span></figcaption>
             </figure>
             <figure class="medal" style="--i: 2; --glow-c: #ffc35a;">
-              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="../assets/img/gold.png" alt="" /><img class="medal__face medal__face--back" src="../assets/img/gold.png" alt="" /></div>
+              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="../assets/img/gold.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /><img class="medal__face medal__face--back" src="../assets/img/gold.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /></div>
               <figcaption><span class="medal__tier" data-i18n="tier.gold">Altın</span><br /><span class="medal__range" data-i18n="journey.r3">Seviye 301 – 500 · Σ ×1,75</span></figcaption>
             </figure>
           </div>
@@ -349,7 +398,7 @@
 
           <div class="extras">
             <article class="card" data-tilt data-reveal>
-              <div class="card__art"><button type="button" class="chest" data-action="chest" aria-label="Sandığı aç" data-i18n-aria="journey.chestOpen"><img src="../assets/img/treasure-chest.svg" alt="" /></button></div>
+              <div class="card__art"><button type="button" class="chest" data-action="chest" aria-label="Sandığı aç" data-i18n-aria="journey.chestOpen"><img src="../assets/img/treasure-chest.svg" alt="" width="40" height="40" loading="lazy" decoding="async" /></button></div>
               <h3 class="card__title" data-i18n="journey.chestT">Her 10 seviyede bir sandık</h3>
               <p class="card__text" data-i18n="journey.chestP">Kazanımlar haritasında ilerledikçe sandıklar açılır: Sigma, Epsilon ve her 50 seviyede bir joker. Sandığa tıkla.</p>
             </article>
@@ -375,7 +424,7 @@
       </section>
 
       <!-- POWER-UPS -->
-      <section class="section powerups" data-shape="cloud" aria-labelledby="pu-title">
+      <section class="section powerups" data-section="powerups" data-shape="cloud" aria-labelledby="pu-title">
         <div class="shell">
           <div class="section-head section-head--center">
             <span class="eyebrow" data-i18n="pu.eyebrow">05 · Jokerler</span>
@@ -383,16 +432,16 @@
             <p class="lead" data-reveal data-i18n="pu.lead">Her joker türünden 3'er hakla başlarsın. Bitince Epsilon ile al ya da kısa bir reklam izle.</p>
           </div>
           <div class="pus">
-            <article class="card pu-card" data-tilt data-reveal><img class="pu-card__img" src="../assets/img/pu-idea.png" alt="" /><h3 class="card__title" data-i18n="pu.hint">İpucu</h3><p class="card__text" data-i18n="pu.hintP">Cevaba giden yolu fısıldar.</p><span class="pu-card__cost tnum">900 ε</span></article>
-            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.08s;"><img class="pu-card__img" src="../assets/img/pu-graphic.png" alt="" /><h3 class="card__title" data-i18n="pu.fifty">50-50</h3><p class="card__text" data-i18n="pu.fiftyP">İki yanlış şık buharlaşır.</p><span class="pu-card__cost tnum">600 ε</span></article>
-            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.16s;"><img class="pu-card__img" src="../assets/img/pu-shuffle.png" alt="" /><h3 class="card__title" data-i18n="pu.change">Soruyu Değiştir</h3><p class="card__text" data-i18n="pu.changeP">Aynı seviyeden yepyeni bir soru.</p><span class="pu-card__cost tnum">450 ε</span></article>
-            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.24s;"><img class="pu-card__img" src="../assets/img/pu-timer.png" alt="" /><h3 class="card__title" data-i18n="pu.time">+5 Saniye</h3><p class="card__text" data-i18n="pu.timeP">Saate beş saniye ekler.</p><span class="pu-card__cost tnum">300 ε</span></article>
+            <article class="card pu-card" data-tilt data-reveal><img class="pu-card__img" src="../assets/img/pu-idea.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><h3 class="card__title" data-i18n="pu.hint">İpucu</h3><p class="card__text" data-i18n="pu.hintP">Cevaba giden yolu fısıldar.</p><span class="pu-card__cost tnum">900 ε</span></article>
+            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.08s;"><img class="pu-card__img" src="../assets/img/pu-graphic.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><h3 class="card__title" data-i18n="pu.fifty">50-50</h3><p class="card__text" data-i18n="pu.fiftyP">İki yanlış şık buharlaşır.</p><span class="pu-card__cost tnum">600 ε</span></article>
+            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.16s;"><img class="pu-card__img" src="../assets/img/pu-shuffle.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><h3 class="card__title" data-i18n="pu.change">Soruyu Değiştir</h3><p class="card__text" data-i18n="pu.changeP">Aynı seviyeden yepyeni bir soru.</p><span class="pu-card__cost tnum">450 ε</span></article>
+            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.24s;"><img class="pu-card__img" src="../assets/img/pu-timer.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><h3 class="card__title" data-i18n="pu.time">+5 Saniye</h3><p class="card__text" data-i18n="pu.timeP">Saate beş saniye ekler.</p><span class="pu-card__cost tnum">300 ε</span></article>
           </div>
         </div>
       </section>
 
       <!-- SCREENS -->
-      <section class="section screens" id="screens" data-shape="cloud" aria-labelledby="screens-title">
+      <section class="section screens" id="screens" data-section="screens" data-shape="cloud" aria-labelledby="screens-title">
         <div class="shell">
           <div class="section-head section-head--center">
             <span class="eyebrow" data-i18n="screens.eyebrow">06 · Uygulama</span>
@@ -400,11 +449,11 @@
           </div>
           <div class="carousel" data-carousel>
             <div class="carousel__ring">
-              <figure class="phone" style="--i: 0;"><img class="phone__screen" data-screen="01-home" src="../assets/screens/tr/01-home.png" alt="Ana sayfa: kategori çarkı" data-i18n-alt="screens.home" /><figcaption class="phone__label" data-i18n="screens.homeL">Kategori çarkı</figcaption></figure>
-              <figure class="phone" style="--i: 1;"><img class="phone__screen" data-screen="02-game" src="../assets/screens/tr/02-game.png" alt="Oyun ekranı" data-i18n-alt="screens.game" /><figcaption class="phone__label" data-i18n="screens.gameL">20 saniye</figcaption></figure>
-              <figure class="phone" style="--i: 2;"><img class="phone__screen" data-screen="03-fifty" src="../assets/screens/tr/03-fifty.png" alt="50-50 jokeri" data-i18n-alt="screens.fifty" /><figcaption class="phone__label" data-i18n="screens.fiftyL">50-50 jokeri</figcaption></figure>
-              <figure class="phone" style="--i: 3;"><img class="phone__screen" data-screen="08-achievements" src="../assets/screens/tr/08-achievements.png" alt="Kazanımlar haritası" data-i18n-alt="screens.ach" /><figcaption class="phone__label" data-i18n="screens.achL">Kazanımlar</figcaption></figure>
-              <figure class="phone" style="--i: 4;"><img class="phone__screen" data-screen="09-store-1" src="../assets/screens/tr/09-store-1.png" alt="Mağaza" data-i18n-alt="screens.store" /><figcaption class="phone__label" data-i18n="screens.storeL">Mağaza</figcaption></figure>
+              <figure class="phone" style="--i: 0;"><img class="phone__screen" data-screen="01-home" src="../assets/screens/tr/01-home.webp" alt="Ana sayfa: kategori çarkı" data-i18n-alt="screens.home" width="360" height="780" loading="lazy" decoding="async" /><figcaption class="phone__label" data-i18n="screens.homeL">Kategori çarkı</figcaption></figure>
+              <figure class="phone" style="--i: 1;"><img class="phone__screen" data-screen="02-game" src="../assets/screens/tr/02-game.webp" alt="Oyun ekranı" data-i18n-alt="screens.game" width="360" height="780" loading="lazy" decoding="async" /><figcaption class="phone__label" data-i18n="screens.gameL">20 saniye</figcaption></figure>
+              <figure class="phone" style="--i: 2;"><img class="phone__screen" data-screen="03-fifty" src="../assets/screens/tr/03-fifty.webp" alt="50-50 jokeri" data-i18n-alt="screens.fifty" width="360" height="780" loading="lazy" decoding="async" /><figcaption class="phone__label" data-i18n="screens.fiftyL">50-50 jokeri</figcaption></figure>
+              <figure class="phone" style="--i: 3;"><img class="phone__screen" data-screen="08-achievements" src="../assets/screens/tr/08-achievements.webp" alt="Kazanımlar haritası" data-i18n-alt="screens.ach" width="360" height="780" loading="lazy" decoding="async" /><figcaption class="phone__label" data-i18n="screens.achL">Kazanımlar</figcaption></figure>
+              <figure class="phone" style="--i: 4;"><img class="phone__screen" data-screen="09-store-1" src="../assets/screens/tr/09-store-1.webp" alt="Mağaza" data-i18n-alt="screens.store" width="360" height="780" loading="lazy" decoding="async" /><figcaption class="phone__label" data-i18n="screens.storeL">Mağaza</figcaption></figure>
             </div>
           </div>
           <p class="carousel__hint" data-i18n="screens.hint">Sürükle ve döndür</p>
@@ -412,7 +461,7 @@
       </section>
 
       <!-- TRUST -->
-      <section class="section trust" data-shape="n16" aria-labelledby="trust-title">
+      <section class="section trust" data-section="details" data-shape="n16" aria-labelledby="trust-title">
         <div class="shell">
           <div class="section-head">
             <span class="eyebrow" data-i18n="trust.eyebrow">07 · Detaylar</span>
@@ -430,15 +479,17 @@
       </section>
 
       <!-- CTA -->
-      <section class="section cta" id="download" data-shape="compass" aria-labelledby="cta-title">
+      <section class="section cta" id="download" data-section="download" data-shape="compass" aria-labelledby="cta-title">
         <div class="cta__inner">
           <div class="cta__art" data-shape-anchor="compass"></div>
           <h2 class="cta__title" id="cta-title" data-reveal><span data-i18n="cta.t1">Zihnin</span><br /><span class="headline__glow" data-i18n="cta.t2">hazır mı?</span></h2>
+          <!-- store:cta — written by tools/apply-store-config.mjs -->
           <p class="lead" data-reveal data-i18n="cta.lead">MathMaker çok yakında App Store ve Google Play'de. Çıktığı gün haber almak için bir rozete dokun.</p>
           <div class="stores" data-reveal>
-            <a class="store" href="mailto:contact@math-maker.com?subject=MathMaker%20iOS" data-magnetic aria-label="App Store — çok yakında" data-i18n-aria="cta.ios"><img src="../assets/img/app-store.png" alt="" /><span class="store__ribbon" data-i18n="cta.soon">Çok yakında</span></a>
-            <a class="store" href="mailto:contact@math-maker.com?subject=MathMaker%20Android" data-magnetic aria-label="Google Play — çok yakında" data-i18n-aria="cta.android"><img src="../assets/img/google-play.png" alt="" /><span class="store__ribbon" data-i18n="cta.soon">Çok yakında</span></a>
+            <a class="store" href="mailto:contact@math-maker.com?subject=MathMaker%20iOS" data-magnetic aria-label="App Store — çok yakında" data-i18n-aria="cta.ios" data-track="store_click" data-track-platform="ios" data-track-location="cta" data-track-status="coming_soon"><img src="../assets/img/app-store.webp" alt="" width="240" height="80" loading="lazy" decoding="async" /><span class="store__ribbon" data-i18n="cta.soon">Çok yakında</span></a>
+            <a class="store" href="mailto:contact@math-maker.com?subject=MathMaker%20Android" data-magnetic aria-label="Google Play — çok yakında" data-i18n-aria="cta.android" data-track="store_click" data-track-platform="android" data-track-location="cta" data-track-status="coming_soon"><img src="../assets/img/google-play.webp" alt="" width="240" height="80" loading="lazy" decoding="async" /><span class="store__ribbon" data-i18n="cta.soon">Çok yakında</span></a>
           </div>
+          <!-- /store:cta -->
         </div>
       </section>
 
@@ -448,6 +499,7 @@
           <a href="support.html" data-link="support" data-i18n="footer.support">Destek</a>
           <a href="privacy-policy.html" data-link="privacy" data-i18n="footer.privacy">Gizlilik</a>
           <a href="terms-of-service.html" data-link="terms" data-i18n="footer.terms">Koşullar</a>
+          <button type="button" class="footer__consent" data-consent-open data-i18n="footer.cookies">Çerez tercihleri</button>
         </nav>
         <span data-i18n="footer.note">Exo yazı tipi · SIL OFL</span>
       </footer>

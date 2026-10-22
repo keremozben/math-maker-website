@@ -13,6 +13,28 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#0a1018" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- store:meta — written by tools/apply-store-config.mjs -->
+    <!-- /store:meta -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MathMaker : Mind Challenge" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="tr_TR" />
+    <meta property="og:url" content="https://math-maker.com/terms-of-service.html" />
+    <meta property="og:title" content="Terms of Service - MathMaker : Mind Challenge" />
+    <meta property="og:description" content="Terms of Service for the MathMaker : Mind Challenge math quiz game." />
+    <meta property="og:image" content="https://math-maker.com/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MathMaker : Mind Challenge — timed math quiz game: 7 categories, 3,500 levels, 16 languages" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Terms of Service - MathMaker : Mind Challenge" />
+    <meta name="twitter:description" content="Terms of Service for the MathMaker : Mind Challenge math quiz game." />
+    <meta name="twitter:image" content="https://math-maker.com/og-image.png" />
+    <meta name="twitter:image:alt" content="MathMaker : Mind Challenge — timed math quiz game: 7 categories, 3,500 levels, 16 languages" />
+
     <link rel="preload" href="assets/fonts/exo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/site.css" />
     <script src="assets/site.js" defer></script>
@@ -38,7 +60,7 @@
         <a class="nav__link nav__link--active" href="terms-of-service.html" data-nav="terms" aria-current="page">Terms</a>
       </nav>
       <div class="nav__tools">
-        <div class="lang" role="group" aria-label="Language"><a class="lang__btn" href="tr/terms-of-service.html" hreflang="tr" lang="tr" data-lang="tr">TR</a><a class="lang__btn" href="terms-of-service.html" data-lang="en" aria-current="page">EN</a></div>
+        <div class="lang" role="group" aria-label="Language"><a class="lang__btn" href="tr/terms-of-service.html" hreflang="tr" lang="tr" data-lang="tr" data-track="lang_switch" data-track-from="en" data-track-to="tr">TR</a><a class="lang__btn" href="terms-of-service.html" data-lang="en" aria-current="page">EN</a></div>
         <a class="btn btn--primary btn--sm" href="./#play" data-nav="play" data-magnetic>Play now</a>
       </div>
     </header>
@@ -93,7 +115,7 @@
 <p>These terms are between you and us, not Apple or Google. Apple and Google have no obligation to provide maintenance or support for the game and are not responsible for any claims relating to it. If you downloaded MathMaker : Mind Challenge from the App Store, Apple's standard <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener" target="_blank">Licensed Application End User License Agreement</a> also applies, and Apple and its subsidiaries are third-party beneficiaries of these terms.</p>
 
 <h2>13. Contact</h2>
-<p>Questions about these terms? Email us at <a href="mailto:contact@math-maker.com">contact@math-maker.com</a>.</p>
+<p>Questions about these terms? Email us at <a href="mailto:contact@math-maker.com" data-track="support_contact" data-track-mailto="contact" data-track-page="terms">contact@math-maker.com</a>.</p>
         </article>
       </div>
     </main>
@@ -104,6 +126,7 @@
         <a href="support.html" data-nav="support">Support</a>
         <a href="privacy-policy.html" data-nav="privacy">Privacy Policy</a>
         <a href="terms-of-service.html" data-nav="terms" aria-current="page">Terms of Service</a>
+        <button type="button" class="footer__consent" data-consent-open>Cookie preferences</button>
       </nav>
       <span>Exo typeface · SIL OFL</span>
     </footer>

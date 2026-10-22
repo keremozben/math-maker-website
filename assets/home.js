@@ -1,7 +1,6 @@
 // MathMaker : Mind Challenge — landing page (V2): intro gate, WebGL particle field,
 // Web Audio, scroll scenes, category wheel and the playable browser round.
-// Generated from design-prototypes/website/index.html in the app repo
-// by design-prototypes/website/tools/port-to-site.mjs — edit the prototype.
+// Analytics: every event goes through track() (assets/measure.js, consent-gated GA4).
 // @ts-check
 // ============================================================
 // 1. Config — mirrors src/config/sigmaEconomy.ts, categoryLevels.ts
@@ -21,6 +20,13 @@ const MAX_LIVES = 5;
 const LEVEL_CAP = 500;
 /** Browser demo uses per round: hint once, 50-50 twice, the rest three times. */
 const PU_START = { hint: 1, fifty: 2, change: 3, time: 3 };
+
+/** Consent-gated GA4, loaded on the side: a blocked or failing script never breaks the page. */
+const measure = import('./measure.js').catch(() => null);
+/** @param {string} name @param {Record<string, string | number>} [params] */
+const track = (name, params) => { void measure.then((m) => m?.track(name, params)); };
+/** @param {Record<string, string>} props */
+const setUserProps = (props) => { void measure.then((m) => m?.setUserProps(props)); };
 
 /** @typedef {{ id: string, base: number, eps: number, sigma: number, epsUnlock: number, color: string, x: number, y: number, icon: string }} Cat */
 /** @type {Cat[]} */
@@ -61,7 +67,8 @@ const EN = {
   'nav.aria': 'Sections', 'nav.speed': 'Speed', 'nav.categories': 'Categories', 'nav.play': 'Play', 'nav.journey': 'Journey', 'nav.screens': 'Screens', 'nav.sound': 'Sound', 'nav.cta': 'Play now',
   'hero.tag1': 'Push', 'hero.tag2': 'your mind to the limit', 'hero.tag3': 'against the clock.',
   'hero.lead': "From Pythagoras' Apprentice to the Gauss Apocalypse: seven great minds. Every level is one question, every question 20 seconds. Be fast, keep the streak, multiply your Sigma.",
-  'hero.play': 'Try it in your browser', 'hero.soon': 'Coming soon: iOS & Android', 'hero.hint': 'Click the particles', 'hero.scroll': 'Scroll',
+  'hero.h1': ' : Mind Challenge — timed math quiz game',
+  'hero.play': 'Try it in your browser', 'hero.soon': 'Coming soon: iOS & Android', 'hero.get': 'Get the app', 'hero.hint': 'Click the particles', 'hero.scroll': 'Scroll',
   'stat.cats': 'Categories', 'stat.levels': 'Levels', 'stat.seconds': 'Seconds', 'stat.langs': 'Languages',
   'pitch.title': 'How the game works', 'pitch.l1': 'Four choices.', 'pitch.l2': 'One answer.', 'pitch.l3': 'Twenty seconds.',
   'pitch.sub': 'Every level is a single question. A right answer takes you to the next level; a wrong one costs a life. You have five lives, and one comes back every 30 minutes.',
@@ -97,7 +104,9 @@ const EN = {
   'trust.f': 'Free to play', 'trust.fP': 'Remove ads or unlock categories early if you like — never required.',
   'cta.t1': 'Is your mind', 'cta.t2': 'ready?', 'cta.lead': 'MathMaker is coming soon to the App Store and Google Play. Tap a badge to hear on launch day.',
   'cta.soon': 'Coming soon', 'cta.ios': 'App Store — coming soon', 'cta.android': 'Google Play — coming soon',
-  'footer.aria': 'Legal', 'footer.support': 'Support', 'footer.privacy': 'Privacy', 'footer.terms': 'Terms', 'footer.note': 'Exo typeface · SIL OFL',
+  'cta.leadLive': 'MathMaker is free on the App Store and Google Play. Tap a badge and take the challenge on your phone.',
+  'cta.iosLive': 'Download on the App Store', 'cta.androidLive': 'Get it on Google Play',
+  'footer.aria': 'Legal', 'footer.support': 'Support', 'footer.privacy': 'Privacy', 'footer.terms': 'Terms', 'footer.cookies': 'Cookie preferences', 'footer.note': 'Exo typeface · SIL OFL',
 };
 
 /** @type {Record<'tr' | 'en', Record<string, string>>} */
@@ -105,13 +114,13 @@ const DYN = {
   tr: {
     open: 'Açık', orEps: 'ya da {n} ε', sec: '{n} sn', hint: 'Cevabın son rakamı: {d}', timeUp: 'Süre doldu!', lifeLost: '−1 ♥', strike: 'STRIKE ×2!',
     overTitle: 'Canların bitti!', best: 'Rekorun: {n} Σ', newBest: 'Yeni rekor: {n} Σ!', streak: '{n} / 10', streakHot: 'STRIKE ×2 · {n} seri',
-    tierText: '{tier} {n}/{of}', title: 'MathMaker : Mind Challenge — Zamana karşı zihninin sınırlarını zorla', thousand: 'bin', million: 'milyon',
+    tierText: '{tier} {n}/{of}', title: 'MathMaker : Mind Challenge — Süreli Matematik Oyunu', thousand: 'bin', million: 'milyon',
     gHint: 'İpucu', gFifty: '50-50', gChange: 'Değiştir', gTime: '+5 sn', gLife: '+1 Can',
   },
   en: {
     open: 'Open', orEps: 'or {n} ε', sec: '{n} s', hint: 'The answer ends in {d}', timeUp: "Time's up!", lifeLost: '−1 ♥', strike: 'STRIKE ×2!',
     overTitle: 'Out of lives!', best: 'Your best: {n} Σ', newBest: 'New record: {n} Σ!', streak: '{n} / 10', streakHot: 'STRIKE ×2 · {n} streak',
-    tierText: '{tier} {n}/{of}', title: 'MathMaker : Mind Challenge — Push your mind to the limit against the clock', thousand: 'K', million: 'M',
+    tierText: '{tier} {n}/{of}', title: 'MathMaker : Mind Challenge — Timed Math Quiz Game', thousand: 'K', million: 'M',
     gHint: 'Hint', gFifty: '50-50', gChange: 'Swap', gTime: '+5 s', gLife: '+1 Life',
   },
 };
@@ -179,8 +188,10 @@ const TR_TEXT = {
   "hero.tag2": "zihninin sınırlarını",
   "hero.tag3": "zorla.",
   "hero.lead": "Pisagor'un Çırağı'ndan Gauss Kıyameti'ne yedi büyük zihin. Her seviye tek soru, her soru 20 saniye. Hızlı ol, seriyi koru, Sigma'yı katla.",
+  "hero.h1": " : Mind Challenge — süreli matematik oyunu",
   "hero.play": "Tarayıcıda dene",
   "hero.soon": "Çok yakında: iOS & Android",
+  "hero.get": "Uygulamayı indir",
   "stat.cats": "Kategori",
   "stat.levels": "Seviye",
   "stat.seconds": "Saniye",
@@ -282,9 +293,11 @@ const TR_TEXT = {
   "cta.t2": "hazır mı?",
   "cta.lead": "MathMaker çok yakında App Store ve Google Play'de. Çıktığı gün haber almak için bir rozete dokun.",
   "cta.soon": "Çok yakında",
+  "cta.leadLive": "MathMaker App Store ve Google Play'de ücretsiz. Bir rozete dokun, meydan okumaya telefonunda devam et.",
   "footer.support": "Destek",
   "footer.privacy": "Gizlilik",
   "footer.terms": "Koşullar",
+  "footer.cookies": "Çerez tercihleri",
   "footer.note": "Exo yazı tipi · SIL OFL"
 };
 /** @type {Record<string, string>} */
@@ -300,6 +313,8 @@ const TR_ARIA = {
   "journey.chestOpen": "Sandığı aç",
   "cta.ios": "App Store — çok yakında",
   "cta.android": "Google Play — çok yakında",
+  "cta.iosLive": "App Store'dan indir",
+  "cta.androidLive": "Google Play'den indir",
   "footer.aria": "Yasal"
 };
 /** @type {Record<string, string>} */
@@ -1098,6 +1113,9 @@ if (fx) document.documentElement.classList.add('has-fx');
  */
 function switchLang(lang) {
   if (lang === prefs.lang) return;
+  // Only this event: the address change below must not count as a page view
+  // (GA4 › Enhanced measurement › page changes based on browser history events: off).
+  track('lang_switch', { from: prefs.lang, to: lang });
   prefs.lang = lang;
   savePrefs();
   try { localStorage.setItem(LANG_KEY, lang); } catch { /* storage disabled */ }
@@ -1116,7 +1134,7 @@ function applyLanguage() {
   $$('[data-i18n]').forEach((el) => { const k = /** @type {string} */ (el.dataset.i18n); el.textContent = en ? EN[k] ?? TR_TEXT[k] : TR_TEXT[k]; });
   $$('[data-i18n-aria]').forEach((el) => { const k = /** @type {string} */ (el.dataset.i18nAria); el.setAttribute('aria-label', en ? EN[k] ?? TR_ARIA[k] : TR_ARIA[k]); });
   $$('[data-i18n-alt]').forEach((el) => { const k = /** @type {string} */ (el.dataset.i18nAlt); el.setAttribute('alt', en ? EN[k] ?? TR_ALT[k] : TR_ALT[k]); });
-  $$('[data-screen]').forEach((img) => { /** @type {HTMLImageElement} */ (img).src = new URL(`screens/${prefs.lang}/${img.dataset.screen}.png`, import.meta.url).href; });
+  $$('[data-screen]').forEach((img) => { /** @type {HTMLImageElement} */ (img).src = new URL(`screens/${prefs.lang}/${img.dataset.screen}.webp`, import.meta.url).href; });
   $$('[data-link]').forEach((a) => { a.setAttribute('href', new URL(`${en ? '' : 'tr/'}${LEGAL_LINKS[/** @type {keyof typeof LEGAL_LINKS} */ (a.dataset.link)]}`, SITE_ROOT).href); });
   $$('[data-action="lang"]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === prefs.lang)));
   $$('.bracket').forEach((li, i) => { $('.bracket__mult', li).textContent = fmtMult(TIME_BRACKETS[i].mult); });
@@ -1189,6 +1207,7 @@ function runGate() {
 /** @param {boolean} withSound */
 function enterSite(withSound) {
   if (gate.hidden || gate.classList.contains('gate--leaving')) return;
+  track('gate_enter', { sound: withSound ? 'on' : 'off', ms_to_enter: Math.round(performance.now()) });
   prefs.sound = withSound;
   savePrefs();
   setSound(withSound);
@@ -1218,6 +1237,7 @@ function setSound(on) {
   sound.setEnabled(on);
   const btn = $('[data-action="toggle-sound"]');
   btn.setAttribute('aria-pressed', String(sound.on));
+  setUserProps({ sound_on: sound.on ? 'yes' : 'no' });
 }
 
 // --- Scroll engine: progress, sticky scenes, active shape, nav ---
@@ -1622,6 +1642,8 @@ function loadQuestion(keepTime = false) {
 function startGame() {
   Object.assign(game, { state: 'playing', level: 1, lives: MAX_LIVES, sigma: 0, eps: 0, streak: 0, bestStreak: 0, levels: 0 });
   game.pu = { ...PU_START };
+  track('demo_start', { category: CATS[game.cat].icon });
+  void measure.then((m) => m?.markDemoPlayed());
   g('start').hidden = true;
   g('over').hidden = true;
   sound.click();
@@ -1697,7 +1719,9 @@ function fail(timedOut) {
 
 function endGame() {
   game.state = 'over';
-  if (game.sigma > prefs.best) { prefs.best = game.sigma; savePrefs(); }
+  const newBest = game.sigma > prefs.best;
+  track('demo_end', { levels: game.levels, sigma: game.sigma, best_streak: game.bestStreak, new_best: newBest ? 'yes' : 'no' });
+  if (newBest) { prefs.best = game.sigma; savePrefs(); }
   renderGame();
   g('over').hidden = false;
   sound.strike();
@@ -1707,6 +1731,7 @@ function endGame() {
 function usePowerUp(kind) {
   if (game.state !== 'playing' || game.locked || !game.q || game.pu[kind] <= 0) return;
   game.pu[kind]--;
+  track('demo_powerup', { kind });
   sound.coin();
   if (kind === 'hint') g('hint').textContent = d('hint', { d: game.q.answer % 10 });
   if (kind === 'fifty') {
@@ -1785,14 +1810,18 @@ document.addEventListener('click', (e) => {
   switch (action) {
     case 'enter': enterSite(el.dataset.sound === 'on'); break;
     case 'lang': switchLang(el.dataset.lang === 'en' ? 'en' : 'tr'); sound.click(); break;
-    case 'toggle-sound': prefs.sound = !sound.on; savePrefs(); setSound(prefs.sound); if (prefs.sound) sound.shimmer(); break;
-    case 'cat': selectCat(idx, true); break;
+    case 'toggle-sound':
+      prefs.sound = !sound.on; savePrefs(); setSound(prefs.sound); if (prefs.sound) sound.shimmer();
+      track('sound_toggle', { on: sound.on ? 'yes' : 'no' });
+      break;
+    case 'cat': selectCat(idx, true); track('category_view', { category: CATS[idx].icon }); break;
     case 'play-cat': game.cat = idx; renderPickers(); renderGame(); sound.note(idx, 0.6); break;
     case 'start': case 'restart': startGame(); break;
     case 'answer': answer(Number(el.dataset.index)); break;
     case 'pu': usePowerUp(/** @type {PowerUp} */ (el.dataset.pu)); break;
-    case 'gift': openGift(el); break;
+    case 'gift': if (!el.classList.contains('gift--open')) track('gift_open'); openGift(el); break;
     case 'chest': {
+      track('chest_open');
       const r = el.getBoundingClientRect();
       sparks.emit(r.left + r.width / 2, r.top + r.height * 0.3, { count: 120, colors: ['#ffc35a', '#ffd98a', '#ff6d00', '#fff'], speed: 1.2 });
       for (let k = 0; k < 6; k++) after(k * 70, () => sound.coin());

@@ -1,0 +1,16 @@
+{
+  "name": "MathMaker : Mind Challenge",
+  "short_name": "MathMaker",
+  "description": "Timed math quiz game: 7 categories, 3,500 levels, 20 seconds per question.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#0a1018",
+  "background_color": "#0a1018",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

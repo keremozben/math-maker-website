@@ -13,6 +13,69 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#0a1018" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- store:meta — written by tools/apply-store-config.mjs -->
+    <!-- /store:meta -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MathMaker : Mind Challenge" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:url" content="https://math-maker.com/tr/support.html" />
+    <meta property="og:title" content="Destek - MathMaker : Mind Challenge" />
+    <meta property="og:description" content="MathMaker : Mind Challenge matematik bilgi yarışması oyunu için destek ve iletişim." />
+    <meta property="og:image" content="https://math-maker.com/og-image-tr.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MathMaker : Mind Challenge — süreli matematik bilgi yarışması: 7 kategori, 3.500 seviye, 16 dil" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Destek - MathMaker : Mind Challenge" />
+    <meta name="twitter:description" content="MathMaker : Mind Challenge matematik bilgi yarışması oyunu için destek ve iletişim." />
+    <meta name="twitter:image" content="https://math-maker.com/og-image-tr.png" />
+    <meta name="twitter:image:alt" content="MathMaker : Mind Challenge — süreli matematik bilgi yarışması: 7 kategori, 3.500 seviye, 16 dil" />
+
+    <script type="application/ld+json" id="ld-faq">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Satın alımlarımı nasıl geri yüklerim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oyunda Mağaza'yı aç ve Satın alınanları geri yükle'ye dokun. Kalıcı ürünler (Reklamları Kaldır, kategori kilitleri) aynı Apple Kimliği veya Google Play hesabında geri gelir. Epsilon paketleri gibi tüketilebilir ürünler teslim edildikten sonra geri yüklenemez."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Oyunu yeniden yüklersem ilerlemem kaybolur mu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. İlerlemen yalnızca cihazında saklanır ve sunucularımıza yedeklenmez; oyunu silip yeniden yüklersen veya cihaz değiştirirsen oyun en baştan başlar. Kalıcı satın alımların ise Satın alınanları geri yükle ile geri gelir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Canlar nasıl çalışır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En fazla 5 canın olur. Yanlış cevap veya süre bitimi bir can götürür; her 30 dakikada bir can dolar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Verilerimi nasıl sildiririm?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oyunu kaldırmak cihazındaki tüm oyun verilerini siler — bir kopyasını tutmayız. Satın alma kayıtları gibi diğer veriler için contact@math-maker.com adresine yaz — ayrıntılar Gizlilik Politikası'nın 9. bölümünde."
+            }
+          }
+        ]
+      }
+    </script>
+
     <link rel="preload" href="../assets/fonts/exo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="../assets/site.css" />
     <script src="../assets/site.js" defer></script>
@@ -38,7 +101,7 @@
         <a class="nav__link" href="terms-of-service.html" data-nav="terms">Koşullar</a>
       </nav>
       <div class="nav__tools">
-        <div class="lang" role="group" aria-label="Dil"><a class="lang__btn" href="support.html" data-lang="tr" aria-current="page">TR</a><a class="lang__btn" href="../support.html" hreflang="en" lang="en" data-lang="en">EN</a></div>
+        <div class="lang" role="group" aria-label="Dil"><a class="lang__btn" href="support.html" data-lang="tr" aria-current="page">TR</a><a class="lang__btn" href="../support.html" hreflang="en" lang="en" data-lang="en" data-track="lang_switch" data-track-from="tr" data-track-to="en">EN</a></div>
         <a class="btn btn--primary btn--sm" href="./#play" data-nav="play" data-magnetic>Hemen oyna</a>
       </div>
     </header>
@@ -51,9 +114,9 @@
       </section>
 
       <div class="contacts shell">
-        <div class="contact-card card" data-tilt data-reveal style="--delay: 0.00s;"><span class="contact-card__icon" aria-hidden="true">🎮</span><h2>Oyun desteği ve hata bildirimi</h2><p>Oyunla ilgili sorunlar, yanlış olduğunu düşündüğün bir soru veya bir hata için: <a href="mailto:support@math-maker.com">support@math-maker.com</a>. Lütfen cihaz modelini ve uygulama sürümünü (açılış ekranında ve oyundaki <strong>i</strong> butonuyla açılan Bilgilendirme ekranında yazar) belirt.</p></div>
-        <div class="contact-card card" data-tilt data-reveal style="--delay: 0.08s;"><span class="contact-card__icon" aria-hidden="true">💬</span><h2>Genel bilgi</h2><p>MathMaker : Mind Challenge hakkındaki soruların için: <a href="mailto:info@math-maker.com">info@math-maker.com</a></p></div>
-        <div class="contact-card card" data-tilt data-reveal style="--delay: 0.16s;"><span class="contact-card__icon" aria-hidden="true">🔒</span><h2>Gizlilik, veri silme ve diğer talepler</h2><p>Veri talepleri, özellik önerileri ve diğer her şey için: <a href="mailto:contact@math-maker.com">contact@math-maker.com</a></p></div>
+        <div class="contact-card card" data-tilt data-reveal style="--delay: 0.00s;"><span class="contact-card__icon" aria-hidden="true">🎮</span><h2>Oyun desteği ve hata bildirimi</h2><p>Oyunla ilgili sorunlar, yanlış olduğunu düşündüğün bir soru veya bir hata için: <a href="mailto:support@math-maker.com" data-track="support_contact" data-track-mailto="support" data-track-page="support">support@math-maker.com</a>. Lütfen cihaz modelini ve uygulama sürümünü (açılış ekranında ve oyundaki <strong>i</strong> butonuyla açılan Bilgilendirme ekranında yazar) belirt.</p></div>
+        <div class="contact-card card" data-tilt data-reveal style="--delay: 0.08s;"><span class="contact-card__icon" aria-hidden="true">💬</span><h2>Genel bilgi</h2><p>MathMaker : Mind Challenge hakkındaki soruların için: <a href="mailto:info@math-maker.com" data-track="support_contact" data-track-mailto="info" data-track-page="support">info@math-maker.com</a></p></div>
+        <div class="contact-card card" data-tilt data-reveal style="--delay: 0.16s;"><span class="contact-card__icon" aria-hidden="true">🔒</span><h2>Gizlilik, veri silme ve diğer talepler</h2><p>Veri talepleri, özellik önerileri ve diğer her şey için: <a href="mailto:contact@math-maker.com" data-track="support_contact" data-track-mailto="contact" data-track-page="support">contact@math-maker.com</a></p></div>
       </div>
 
       <section class="support-faq shell" aria-labelledby="faq-title">
@@ -62,7 +125,7 @@
           <div class="faq__item card prose" data-reveal style="--delay: 0.00s;"><p><strong>Satın alımlarımı nasıl geri yüklerim?</strong><br />Oyunda Mağaza'yı aç ve <strong>Satın alınanları geri yükle</strong>'ye dokun. Kalıcı ürünler (Reklamları Kaldır, kategori kilitleri) aynı Apple Kimliği veya Google Play hesabında geri gelir. Epsilon paketleri gibi tüketilebilir ürünler teslim edildikten sonra geri yüklenemez.</p></div>
           <div class="faq__item card prose" data-reveal style="--delay: 0.08s;"><p><strong>Oyunu yeniden yüklersem ilerlemem kaybolur mu?</strong><br />Evet. İlerlemen yalnızca cihazında saklanır ve sunucularımıza yedeklenmez; oyunu silip yeniden yüklersen veya cihaz değiştirirsen oyun en baştan başlar. Kalıcı satın alımların ise <strong>Satın alınanları geri yükle</strong> ile geri gelir.</p></div>
           <div class="faq__item card prose" data-reveal style="--delay: 0.00s;"><p><strong>Canlar nasıl çalışır?</strong><br />En fazla 5 canın olur. Yanlış cevap veya süre bitimi bir can götürür; her 30 dakikada bir can dolar.</p></div>
-          <div class="faq__item card prose" data-reveal style="--delay: 0.08s;"><p><strong>Verilerimi nasıl sildiririm?</strong><br />Oyunu kaldırmak cihazındaki tüm oyun verilerini siler — bir kopyasını tutmayız. Satın alma kayıtları gibi diğer veriler için <a href="mailto:contact@math-maker.com">contact@math-maker.com</a> adresine yaz — ayrıntılar <a href="/tr/privacy-policy.html">Gizlilik Politikası</a>'nın 9. bölümünde.</p></div>
+          <div class="faq__item card prose" data-reveal style="--delay: 0.08s;"><p><strong>Verilerimi nasıl sildiririm?</strong><br />Oyunu kaldırmak cihazındaki tüm oyun verilerini siler — bir kopyasını tutmayız. Satın alma kayıtları gibi diğer veriler için <a href="mailto:contact@math-maker.com" data-track="support_contact" data-track-mailto="contact" data-track-page="support">contact@math-maker.com</a> adresine yaz — ayrıntılar <a href="/tr/privacy-policy.html">Gizlilik Politikası</a>'nın 9. bölümünde.</p></div>
         </div>
       </section>
     </main>
@@ -73,6 +136,7 @@
         <a href="support.html" data-nav="support" aria-current="page">Destek</a>
         <a href="privacy-policy.html" data-nav="privacy">Gizlilik Politikası</a>
         <a href="terms-of-service.html" data-nav="terms">Kullanım Koşulları</a>
+        <button type="button" class="footer__consent" data-consent-open>Çerez tercihleri</button>
       </nav>
       <span>Exo yazı tipi · SIL OFL</span>
     </footer>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MathMaker : Mind Challenge — Push your mind to the limit against the clock</title>
+    <title>MathMaker : Mind Challenge — Timed Math Quiz Game</title>
     <meta name="description" content="MathMaker : Mind Challenge: 7 categories, 3,500 levels, 20 seconds per question. Answer against the clock, collect Sigma and unlock the next great mathematician." />
     <link rel="canonical" href="https://math-maker.com/" />
     <link rel="alternate" hreflang="en" href="https://math-maker.com/" />
@@ -13,22 +13,29 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#0a1018" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- store:meta — written by tools/apply-store-config.mjs -->
+    <!-- /store:meta -->
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MathMaker : Mind Challenge" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="tr_TR" />
     <meta property="og:url" content="https://math-maker.com/" />
     <meta property="og:title" content="MathMaker : Mind Challenge — Timed Math Quiz Game" />
     <meta property="og:description" content="Seven great minds, 3,500 levels, 20 seconds per question. Answer against the clock, collect Sigma and unlock the next great mathematician." />
     <meta property="og:image" content="https://math-maker.com/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MathMaker : Mind Challenge — timed math quiz game: 7 categories, 3,500 levels, 16 languages" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="MathMaker : Mind Challenge — Timed Math Quiz Game" />
     <meta name="twitter:description" content="7 categories, 3,500 levels, 20 seconds per question. How fast is your mind?" />
     <meta name="twitter:image" content="https://math-maker.com/og-image.png" />
+    <meta name="twitter:image:alt" content="MathMaker : Mind Challenge — timed math quiz game: 7 categories, 3,500 levels, 16 languages" />
 
-    <script type="application/ld+json">
+    <script type="application/ld+json" id="ld-game">
       {
         "@context": "https://schema.org",
         "@type": "VideoGame",
@@ -36,11 +43,51 @@
         "description": "A fast-paced, timed multiple-choice math quiz game with 7 categories and 3,500 levels: every level is one question, every question 20 seconds.",
         "url": "https://math-maker.com/",
         "image": "https://math-maker.com/og-image.png",
-        "genre": ["Educational", "Trivia", "Brain Game"],
-        "gamePlatform": ["iOS", "Android"],
+        "screenshot": [
+          "https://math-maker.com/assets/screens/en/01-home.webp",
+          "https://math-maker.com/assets/screens/en/02-game.webp",
+          "https://math-maker.com/assets/screens/en/03-fifty.webp",
+          "https://math-maker.com/assets/screens/en/08-achievements.webp",
+          "https://math-maker.com/assets/screens/en/09-store-1.webp"
+        ],
+        "genre": [
+          "Educational",
+          "Trivia",
+          "Brain Game"
+        ],
+        "gamePlatform": [
+          "iOS",
+          "Android"
+        ],
         "applicationCategory": "GameApplication",
         "operatingSystem": "iOS, Android",
-        "inLanguage": ["en", "tr", "de", "es", "fr", "it", "pt-BR", "pl", "id", "vi", "ru", "hi", "zh-Hans", "zh-Hant", "ja", "ko"]
+        "inLanguage": [
+          "en",
+          "tr",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "pt-BR",
+          "pl",
+          "id",
+          "vi",
+          "ru",
+          "hi",
+          "zh-Hans",
+          "zh-Hant",
+          "ja",
+          "ko"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kerem Özben"
+        }
       }
     </script>
 
@@ -110,9 +157,9 @@
 
     <main class="main">
       <!-- HERO -->
-      <section class="hero" id="top" data-shape="title">
+      <section class="hero" id="top" data-section="hero" data-shape="title">
         <div class="hero__stage">
-          <h1 class="hero__title">MATHMAKER</h1>
+          <h1 class="hero__title">MATHMAKER<span class="visually-hidden" data-i18n="hero.h1"> : Mind Challenge — timed math quiz game</span></h1>
         </div>
         <div class="hero__body">
           <p class="hero__eyebrow">MIND CHALLENGE</p>
@@ -120,7 +167,9 @@
           <p class="hero__lead" data-i18n="hero.lead">From Pythagoras' Apprentice to the Gauss Apocalypse: seven great minds. Every level is one question, every question 20 seconds. Be fast, keep the streak, multiply your Sigma.</p>
           <div class="hero__actions">
             <a class="btn btn--primary btn--xl" href="#play" data-magnetic data-i18n="hero.play">Try it in your browser</a>
+            <!-- store:hero — written by tools/apply-store-config.mjs -->
             <a class="btn btn--ghost btn--xl" href="#download" data-magnetic data-i18n="hero.soon">Coming soon: iOS &amp; Android</a>
+            <!-- /store:hero -->
           </div>
           <ul class="hero__stats">
             <li class="stat"><span class="stat__num tnum" data-count="7">7</span><span class="stat__label" data-i18n="stat.cats">Categories</span></li>
@@ -141,7 +190,7 @@
       </div>
 
       <!-- PITCH -->
-      <section class="pitch" data-shape="question" data-sticky aria-labelledby="pitch-title">
+      <section class="pitch" data-section="pitch" data-shape="question" data-sticky aria-labelledby="pitch-title">
         <div class="pitch__sticky" data-sticky-inner>
           <div>
             <h2 class="visually-hidden" id="pitch-title" data-i18n="pitch.title">How the game works</h2>
@@ -157,7 +206,7 @@
       </section>
 
       <!-- TIMER -->
-      <section class="timer" id="speed" data-shape="ring" data-sticky aria-labelledby="timer-title">
+      <section class="timer" id="speed" data-section="speed" data-shape="ring" data-sticky aria-labelledby="timer-title">
         <div class="timer__sticky" data-sticky-inner>
           <div class="timer__copy">
             <span class="eyebrow" data-i18n="timer.eyebrow">01 · Speed</span>
@@ -187,7 +236,7 @@
       </section>
 
       <!-- CATEGORIES -->
-      <section class="section cats" id="categories" data-shape="heptagon" aria-labelledby="cats-title">
+      <section class="section cats" id="categories" data-section="categories" data-shape="heptagon" aria-labelledby="cats-title">
         <div class="shell">
           <div class="section-head">
             <span class="eyebrow" data-i18n="cats.eyebrow">02 · Seven great minds</span>
@@ -221,9 +270,9 @@
                 <div class="fact"><dt data-i18n="cats.unlock">Unlock</dt><dd class="tnum" data-cat="unlock">Open</dd></div>
               </dl>
               <div class="cat-panel__badges">
-                <span class="badge-chip"><img src="assets/img/bronze.png" alt="" /><span data-cat="b1">Primary School 1</span></span>
-                <span class="badge-chip"><img src="assets/img/silver.png" alt="" /><span data-cat="b2">Primary School 3</span></span>
-                <span class="badge-chip"><img src="assets/img/gold.png" alt="" /><span data-cat="b3">Primary School 5</span></span>
+                <span class="badge-chip"><img src="assets/img/bronze.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /><span data-cat="b1">Primary School 1</span></span>
+                <span class="badge-chip"><img src="assets/img/silver.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /><span data-cat="b2">Primary School 3</span></span>
+                <span class="badge-chip"><img src="assets/img/gold.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /><span data-cat="b3">Primary School 5</span></span>
               </div>
             </article>
           </div>
@@ -235,7 +284,7 @@
       </section>
 
       <!-- PLAY -->
-      <section class="section play" id="play" data-shape="cloud" aria-labelledby="play-title">
+      <section class="section play" id="play" data-section="play" data-shape="cloud" aria-labelledby="play-title">
         <div class="shell">
           <div class="section-head section-head--center">
             <span class="eyebrow" data-i18n="play.eyebrow">03 · Try it now</span>
@@ -278,10 +327,10 @@
                 <button type="button" class="answer tnum" data-action="answer" data-index="3"><span class="answer__key">4</span><span data-g="opt">–</span></button>
               </div>
               <div class="arena__powerups">
-                <button type="button" class="pu-btn" data-action="pu" data-pu="hint" aria-label="Hint" data-i18n-aria="pu.hint"><img src="assets/img/pu-idea.png" alt="" /><span class="pu-btn__count tnum" data-pu-count="hint">1</span></button>
-                <button type="button" class="pu-btn" data-action="pu" data-pu="fifty" aria-label="50-50" data-i18n-aria="pu.fifty"><img src="assets/img/pu-graphic.png" alt="" /><span class="pu-btn__count tnum" data-pu-count="fifty">2</span></button>
-                <button type="button" class="pu-btn" data-action="pu" data-pu="change" aria-label="Swap Question" data-i18n-aria="pu.change"><img src="assets/img/pu-shuffle.png" alt="" /><span class="pu-btn__count tnum" data-pu-count="change">3</span></button>
-                <button type="button" class="pu-btn" data-action="pu" data-pu="time" aria-label="+5 Seconds" data-i18n-aria="pu.time"><img src="assets/img/pu-timer.png" alt="" /><span class="pu-btn__count tnum" data-pu-count="time">3</span></button>
+                <button type="button" class="pu-btn" data-action="pu" data-pu="hint" aria-label="Hint" data-i18n-aria="pu.hint"><img src="assets/img/pu-idea.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><span class="pu-btn__count tnum" data-pu-count="hint">1</span></button>
+                <button type="button" class="pu-btn" data-action="pu" data-pu="fifty" aria-label="50-50" data-i18n-aria="pu.fifty"><img src="assets/img/pu-graphic.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><span class="pu-btn__count tnum" data-pu-count="fifty">2</span></button>
+                <button type="button" class="pu-btn" data-action="pu" data-pu="change" aria-label="Swap Question" data-i18n-aria="pu.change"><img src="assets/img/pu-shuffle.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><span class="pu-btn__count tnum" data-pu-count="change">3</span></button>
+                <button type="button" class="pu-btn" data-action="pu" data-pu="time" aria-label="+5 Seconds" data-i18n-aria="pu.time"><img src="assets/img/pu-timer.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><span class="pu-btn__count tnum" data-pu-count="time">3</span></button>
               </div>
             </div>
 
@@ -323,7 +372,7 @@
       </section>
 
       <!-- JOURNEY -->
-      <section class="section journey" id="journey" data-shape="n500" aria-labelledby="journey-title">
+      <section class="section journey" id="journey" data-section="journey" data-shape="n500" aria-labelledby="journey-title">
         <div class="shell">
           <div class="section-head">
             <span class="eyebrow" data-i18n="journey.eyebrow">04 · The journey</span>
@@ -332,15 +381,15 @@
           </div>
           <div class="medals" data-shape-anchor="n500">
             <figure class="medal" style="--i: 0; --glow-c: #cd7f32;">
-              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="assets/img/bronze.png" alt="" /><img class="medal__face medal__face--back" src="assets/img/bronze.png" alt="" /></div>
+              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="assets/img/bronze.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /><img class="medal__face medal__face--back" src="assets/img/bronze.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /></div>
               <figcaption><span class="medal__tier" data-i18n="tier.bronze">Bronze</span><br /><span class="medal__range" data-i18n="journey.r1">Levels 1 – 100</span></figcaption>
             </figure>
             <figure class="medal" style="--i: 1; --glow-c: #cfd8e3;">
-              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="assets/img/silver.png" alt="" /><img class="medal__face medal__face--back" src="assets/img/silver.png" alt="" /></div>
+              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="assets/img/silver.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /><img class="medal__face medal__face--back" src="assets/img/silver.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /></div>
               <figcaption><span class="medal__tier" data-i18n="tier.silver">Silver</span><br /><span class="medal__range" data-i18n="journey.r2">Levels 101 – 300 · Σ ×1.35</span></figcaption>
             </figure>
             <figure class="medal" style="--i: 2; --glow-c: #ffc35a;">
-              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="assets/img/gold.png" alt="" /><img class="medal__face medal__face--back" src="assets/img/gold.png" alt="" /></div>
+              <div class="medal__coin"><span class="medal__glow"></span><img class="medal__face" src="assets/img/gold.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /><img class="medal__face medal__face--back" src="assets/img/gold.webp" alt="" width="384" height="384" loading="lazy" decoding="async" /></div>
               <figcaption><span class="medal__tier" data-i18n="tier.gold">Gold</span><br /><span class="medal__range" data-i18n="journey.r3">Levels 301 – 500 · Σ ×1.75</span></figcaption>
             </figure>
           </div>
@@ -349,7 +398,7 @@
 
           <div class="extras">
             <article class="card" data-tilt data-reveal>
-              <div class="card__art"><button type="button" class="chest" data-action="chest" aria-label="Open the chest" data-i18n-aria="journey.chestOpen"><img src="assets/img/treasure-chest.svg" alt="" /></button></div>
+              <div class="card__art"><button type="button" class="chest" data-action="chest" aria-label="Open the chest" data-i18n-aria="journey.chestOpen"><img src="assets/img/treasure-chest.svg" alt="" width="40" height="40" loading="lazy" decoding="async" /></button></div>
               <h3 class="card__title" data-i18n="journey.chestT">A chest every 10 levels</h3>
               <p class="card__text" data-i18n="journey.chestP">Chests open as you advance on the achievements map: Sigma, Epsilon and a power-up every 50 levels. Click the chest.</p>
             </article>
@@ -375,7 +424,7 @@
       </section>
 
       <!-- POWER-UPS -->
-      <section class="section powerups" data-shape="cloud" aria-labelledby="pu-title">
+      <section class="section powerups" data-section="powerups" data-shape="cloud" aria-labelledby="pu-title">
         <div class="shell">
           <div class="section-head section-head--center">
             <span class="eyebrow" data-i18n="pu.eyebrow">05 · Power-ups</span>
@@ -383,16 +432,16 @@
             <p class="lead" data-reveal data-i18n="pu.lead">You start with 3 of each power-up. When they run out, buy more with Epsilon or watch a short ad.</p>
           </div>
           <div class="pus">
-            <article class="card pu-card" data-tilt data-reveal><img class="pu-card__img" src="assets/img/pu-idea.png" alt="" /><h3 class="card__title" data-i18n="pu.hint">Hint</h3><p class="card__text" data-i18n="pu.hintP">Whispers the way to the answer.</p><span class="pu-card__cost tnum">900 ε</span></article>
-            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.08s;"><img class="pu-card__img" src="assets/img/pu-graphic.png" alt="" /><h3 class="card__title" data-i18n="pu.fifty">50-50</h3><p class="card__text" data-i18n="pu.fiftyP">Two wrong choices vanish.</p><span class="pu-card__cost tnum">600 ε</span></article>
-            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.16s;"><img class="pu-card__img" src="assets/img/pu-shuffle.png" alt="" /><h3 class="card__title" data-i18n="pu.change">Swap Question</h3><p class="card__text" data-i18n="pu.changeP">A brand-new question from the same level.</p><span class="pu-card__cost tnum">450 ε</span></article>
-            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.24s;"><img class="pu-card__img" src="assets/img/pu-timer.png" alt="" /><h3 class="card__title" data-i18n="pu.time">+5 Seconds</h3><p class="card__text" data-i18n="pu.timeP">Adds five seconds to the clock.</p><span class="pu-card__cost tnum">300 ε</span></article>
+            <article class="card pu-card" data-tilt data-reveal><img class="pu-card__img" src="assets/img/pu-idea.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><h3 class="card__title" data-i18n="pu.hint">Hint</h3><p class="card__text" data-i18n="pu.hintP">Whispers the way to the answer.</p><span class="pu-card__cost tnum">900 ε</span></article>
+            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.08s;"><img class="pu-card__img" src="assets/img/pu-graphic.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><h3 class="card__title" data-i18n="pu.fifty">50-50</h3><p class="card__text" data-i18n="pu.fiftyP">Two wrong choices vanish.</p><span class="pu-card__cost tnum">600 ε</span></article>
+            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.16s;"><img class="pu-card__img" src="assets/img/pu-shuffle.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><h3 class="card__title" data-i18n="pu.change">Swap Question</h3><p class="card__text" data-i18n="pu.changeP">A brand-new question from the same level.</p><span class="pu-card__cost tnum">450 ε</span></article>
+            <article class="card pu-card" data-tilt data-reveal style="--delay: 0.24s;"><img class="pu-card__img" src="assets/img/pu-timer.webp" alt="" width="320" height="320" loading="lazy" decoding="async" /><h3 class="card__title" data-i18n="pu.time">+5 Seconds</h3><p class="card__text" data-i18n="pu.timeP">Adds five seconds to the clock.</p><span class="pu-card__cost tnum">300 ε</span></article>
           </div>
         </div>
       </section>
 
       <!-- SCREENS -->
-      <section class="section screens" id="screens" data-shape="cloud" aria-labelledby="screens-title">
+      <section class="section screens" id="screens" data-section="screens" data-shape="cloud" aria-labelledby="screens-title">
         <div class="shell">
           <div class="section-head section-head--center">
             <span class="eyebrow" data-i18n="screens.eyebrow">06 · The app</span>
@@ -400,11 +449,11 @@
           </div>
           <div class="carousel" data-carousel>
             <div class="carousel__ring">
-              <figure class="phone" style="--i: 0;"><img class="phone__screen" data-screen="01-home" src="assets/screens/en/01-home.png" alt="Home screen: the category wheel" data-i18n-alt="screens.home" /><figcaption class="phone__label" data-i18n="screens.homeL">Category wheel</figcaption></figure>
-              <figure class="phone" style="--i: 1;"><img class="phone__screen" data-screen="02-game" src="assets/screens/en/02-game.png" alt="Game screen" data-i18n-alt="screens.game" /><figcaption class="phone__label" data-i18n="screens.gameL">20 seconds</figcaption></figure>
-              <figure class="phone" style="--i: 2;"><img class="phone__screen" data-screen="03-fifty" src="assets/screens/en/03-fifty.png" alt="50-50 power-up" data-i18n-alt="screens.fifty" /><figcaption class="phone__label" data-i18n="screens.fiftyL">50-50</figcaption></figure>
-              <figure class="phone" style="--i: 3;"><img class="phone__screen" data-screen="08-achievements" src="assets/screens/en/08-achievements.png" alt="Achievements map" data-i18n-alt="screens.ach" /><figcaption class="phone__label" data-i18n="screens.achL">Achievements</figcaption></figure>
-              <figure class="phone" style="--i: 4;"><img class="phone__screen" data-screen="09-store-1" src="assets/screens/en/09-store-1.png" alt="Store" data-i18n-alt="screens.store" /><figcaption class="phone__label" data-i18n="screens.storeL">Store</figcaption></figure>
+              <figure class="phone" style="--i: 0;"><img class="phone__screen" data-screen="01-home" src="assets/screens/en/01-home.webp" alt="Home screen: the category wheel" data-i18n-alt="screens.home" width="360" height="780" loading="lazy" decoding="async" /><figcaption class="phone__label" data-i18n="screens.homeL">Category wheel</figcaption></figure>
+              <figure class="phone" style="--i: 1;"><img class="phone__screen" data-screen="02-game" src="assets/screens/en/02-game.webp" alt="Game screen" data-i18n-alt="screens.game" width="360" height="780" loading="lazy" decoding="async" /><figcaption class="phone__label" data-i18n="screens.gameL">20 seconds</figcaption></figure>
+              <figure class="phone" style="--i: 2;"><img class="phone__screen" data-screen="03-fifty" src="assets/screens/en/03-fifty.webp" alt="50-50 power-up" data-i18n-alt="screens.fifty" width="360" height="780" loading="lazy" decoding="async" /><figcaption class="phone__label" data-i18n="screens.fiftyL">50-50</figcaption></figure>
+              <figure class="phone" style="--i: 3;"><img class="phone__screen" data-screen="08-achievements" src="assets/screens/en/08-achievements.webp" alt="Achievements map" data-i18n-alt="screens.ach" width="360" height="780" loading="lazy" decoding="async" /><figcaption class="phone__label" data-i18n="screens.achL">Achievements</figcaption></figure>
+              <figure class="phone" style="--i: 4;"><img class="phone__screen" data-screen="09-store-1" src="assets/screens/en/09-store-1.webp" alt="Store" data-i18n-alt="screens.store" width="360" height="780" loading="lazy" decoding="async" /><figcaption class="phone__label" data-i18n="screens.storeL">Store</figcaption></figure>
             </div>
           </div>
           <p class="carousel__hint" data-i18n="screens.hint">Drag to spin</p>
@@ -412,7 +461,7 @@
       </section>
 
       <!-- TRUST -->
-      <section class="section trust" data-shape="n16" aria-labelledby="trust-title">
+      <section class="section trust" data-section="details" data-shape="n16" aria-labelledby="trust-title">
         <div class="shell">
           <div class="section-head">
             <span class="eyebrow" data-i18n="trust.eyebrow">07 · Details</span>
@@ -430,15 +479,17 @@
       </section>
 
       <!-- CTA -->
-      <section class="section cta" id="download" data-shape="compass" aria-labelledby="cta-title">
+      <section class="section cta" id="download" data-section="download" data-shape="compass" aria-labelledby="cta-title">
         <div class="cta__inner">
           <div class="cta__art" data-shape-anchor="compass"></div>
           <h2 class="cta__title" id="cta-title" data-reveal><span data-i18n="cta.t1">Is your mind</span><br /><span class="headline__glow" data-i18n="cta.t2">ready?</span></h2>
+          <!-- store:cta — written by tools/apply-store-config.mjs -->
           <p class="lead" data-reveal data-i18n="cta.lead">MathMaker is coming soon to the App Store and Google Play. Tap a badge to hear on launch day.</p>
           <div class="stores" data-reveal>
-            <a class="store" href="mailto:contact@math-maker.com?subject=MathMaker%20iOS" data-magnetic aria-label="App Store — coming soon" data-i18n-aria="cta.ios"><img src="assets/img/app-store.png" alt="" /><span class="store__ribbon" data-i18n="cta.soon">Coming soon</span></a>
-            <a class="store" href="mailto:contact@math-maker.com?subject=MathMaker%20Android" data-magnetic aria-label="Google Play — coming soon" data-i18n-aria="cta.android"><img src="assets/img/google-play.png" alt="" /><span class="store__ribbon" data-i18n="cta.soon">Coming soon</span></a>
+            <a class="store" href="mailto:contact@math-maker.com?subject=MathMaker%20iOS" data-magnetic aria-label="App Store — coming soon" data-i18n-aria="cta.ios" data-track="store_click" data-track-platform="ios" data-track-location="cta" data-track-status="coming_soon"><img src="assets/img/app-store.webp" alt="" width="240" height="80" loading="lazy" decoding="async" /><span class="store__ribbon" data-i18n="cta.soon">Coming soon</span></a>
+            <a class="store" href="mailto:contact@math-maker.com?subject=MathMaker%20Android" data-magnetic aria-label="Google Play — coming soon" data-i18n-aria="cta.android" data-track="store_click" data-track-platform="android" data-track-location="cta" data-track-status="coming_soon"><img src="assets/img/google-play.webp" alt="" width="240" height="80" loading="lazy" decoding="async" /><span class="store__ribbon" data-i18n="cta.soon">Coming soon</span></a>
           </div>
+          <!-- /store:cta -->
         </div>
       </section>
 
@@ -448,6 +499,7 @@
           <a href="support.html" data-link="support" data-i18n="footer.support">Support</a>
           <a href="privacy-policy.html" data-link="privacy" data-i18n="footer.privacy">Privacy</a>
           <a href="terms-of-service.html" data-link="terms" data-i18n="footer.terms">Terms</a>
+          <button type="button" class="footer__consent" data-consent-open data-i18n="footer.cookies">Cookie preferences</button>
         </nav>
         <span data-i18n="footer.note">Exo typeface · SIL OFL</span>
       </footer>

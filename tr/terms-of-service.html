@@ -13,6 +13,28 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#0a1018" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- store:meta — written by tools/apply-store-config.mjs -->
+    <!-- /store:meta -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MathMaker : Mind Challenge" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:url" content="https://math-maker.com/tr/terms-of-service.html" />
+    <meta property="og:title" content="Kullanım Koşulları - MathMaker : Mind Challenge" />
+    <meta property="og:description" content="MathMaker : Mind Challenge matematik bilgi yarışması oyununun Kullanım Koşulları." />
+    <meta property="og:image" content="https://math-maker.com/og-image-tr.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MathMaker : Mind Challenge — süreli matematik bilgi yarışması: 7 kategori, 3.500 seviye, 16 dil" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kullanım Koşulları - MathMaker : Mind Challenge" />
+    <meta name="twitter:description" content="MathMaker : Mind Challenge matematik bilgi yarışması oyununun Kullanım Koşulları." />
+    <meta name="twitter:image" content="https://math-maker.com/og-image-tr.png" />
+    <meta name="twitter:image:alt" content="MathMaker : Mind Challenge — süreli matematik bilgi yarışması: 7 kategori, 3.500 seviye, 16 dil" />
+
     <link rel="preload" href="../assets/fonts/exo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="../assets/site.css" />
     <script src="../assets/site.js" defer></script>
@@ -38,7 +60,7 @@
         <a class="nav__link nav__link--active" href="terms-of-service.html" data-nav="terms" aria-current="page">Koşullar</a>
       </nav>
       <div class="nav__tools">
-        <div class="lang" role="group" aria-label="Dil"><a class="lang__btn" href="terms-of-service.html" data-lang="tr" aria-current="page">TR</a><a class="lang__btn" href="../terms-of-service.html" hreflang="en" lang="en" data-lang="en">EN</a></div>
+        <div class="lang" role="group" aria-label="Dil"><a class="lang__btn" href="terms-of-service.html" data-lang="tr" aria-current="page">TR</a><a class="lang__btn" href="../terms-of-service.html" hreflang="en" lang="en" data-lang="en" data-track="lang_switch" data-track-from="tr" data-track-to="en">EN</a></div>
         <a class="btn btn--primary btn--sm" href="./#play" data-nav="play" data-magnetic>Hemen oyna</a>
       </div>
     </header>
@@ -93,7 +115,7 @@
 <p>Bu koşullar Apple veya Google ile değil, sizinle bizim aramızdadır. Apple ve Google'ın oyun için bakım veya destek sağlama yükümlülüğü yoktur ve oyunla ilgili hiçbir talepten sorumlu değildir. MathMaker : Mind Challenge'ı App Store'dan indirdiyseniz Apple'ın standart <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener" target="_blank">Lisanslı Uygulama Son Kullanıcı Lisans Sözleşmesi</a> (Licensed Application End User License Agreement) de geçerlidir; Apple ve bağlı şirketleri bu koşulların üçüncü taraf lehtarlarıdır.</p>
 
 <h2>13. İletişim</h2>
-<p>Bu koşullarla ilgili sorularınız mı var? <a href="mailto:contact@math-maker.com">contact@math-maker.com</a> adresinden bize e-posta gönderin.</p>
+<p>Bu koşullarla ilgili sorularınız mı var? <a href="mailto:contact@math-maker.com" data-track="support_contact" data-track-mailto="contact" data-track-page="terms">contact@math-maker.com</a> adresinden bize e-posta gönderin.</p>
         </article>
       </div>
     </main>
@@ -104,6 +126,7 @@
         <a href="support.html" data-nav="support">Destek</a>
         <a href="privacy-policy.html" data-nav="privacy">Gizlilik Politikası</a>
         <a href="terms-of-service.html" data-nav="terms" aria-current="page">Kullanım Koşulları</a>
+        <button type="button" class="footer__consent" data-consent-open>Çerez tercihleri</button>
       </nav>
       <span>Exo yazı tipi · SIL OFL</span>
     </footer>
